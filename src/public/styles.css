@@ -399,9 +399,12 @@ li:first-child::before {
   justify-content: center;
   align-items: center;
   height: 700px;
+}
 /* graph */
+
 .bar {
   fill: steelblue;
+  width: 50;
 }
 
 .bar:hover {
