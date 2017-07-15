@@ -12,6 +12,7 @@ body {
   /*background-image: url('http://www.reapontario.ca/wp-content/uploads/2014/12/bigstock-Multi-ethnic-Group-Of-Students-4413098.jpg');*/
   /*background-image: url('http://s1.r29static.com//bin/entry/b60/x,80/1770692/image.jpg');*/
   /*background-image: url('https://znet.ng/wp-content/uploads/2017/01/world-tech-ceos-vs-trump-1-640x426.jpg');*/
+  /*background-image: url('https://fthmb.tqn.com/spaZKVnogQzg2AxDK-CDwOa6VMM=/1500x1000/filters:no_upscale():fill(FFCC00,1)/about/DonaldTrumpFunnyFace-58b1bd865f9b5860460f82ed.jpg');*/
   background-size: cover;
 }
 
@@ -46,7 +47,7 @@ body {
 
 .signupWrapper {
   min-width: 350px;
-  height: 460px;
+  min-height: 460px;
   background-color: #fafbfc;
   padding: 24px;
   display: flex;
