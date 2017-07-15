@@ -12,6 +12,7 @@ import MenuItem from 'material-ui/MenuItem';
 import StarBorder from 'material-ui/svg-icons/toggle/star-border';
 import {GridList, GridTile} from 'material-ui/GridList';
 import BarChart from 'react-bar-chart';
+import FlatButton from 'material-ui/FlatButton';
 
 
 const margin = {top: 20, right: 20, bottom: 20, left: 60};
@@ -70,7 +71,7 @@ const Community = props => {
       <div className="Community__cards" style={{justifyContent: 'spaceAround'}}>
         <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'row', marginTop: 0}}>
           <Card className="Community__content1">
-            <CardTitle title="Your Details" style={{paddingBottom: 0, marginBottom: 0, alignSelf: 'center'}} />
+            <CardTitle title="Your Details" style={{fontWeight: 'bold', paddingBottom: 0, marginBottom: 0, alignSelf: 'center'}} />
             <CardText style={{paddingTop: 0, marginTop: -60, alignSelf: 'center'}}>
                 <List  style={{display: 'flex', flexDirection: 'rowReverse', justifyContent: 'center', paddingLeft: 200, alignItems: 'center'}}>
                   <Divider />
@@ -81,7 +82,7 @@ const Community = props => {
             </CardText>
           </Card>
           <Card className="Community__content3">
-            <CardTitle title="The Community" style={{paddingBottom: 0, marginBottom: 0, alignSelf: 'center'}} />
+            <CardTitle title="The Community" style={{fontWeight: 'bold', paddingBottom: 0, marginBottom: 0, alignSelf: 'center'}} />
             <CardText style={{paddingTop: 0, marginTop: -65, alignSelf: 'center'}}>
               <List  style={{display: 'flex', flexDirection: 'rowReverse', justifyContent: 'center', paddingLeft: 200, alignItems: 'center'}}>
                   <ListItem style={{fontWeight: 'bold'}} primaryText="At The Same Step As You:" secondaryText="10,000 people" />
@@ -94,15 +95,15 @@ const Community = props => {
         <div style={{display: 'flex', flexDirection: 'row', marginBottom: 10, flexGrow: 1}}>
           <div style={{flex: 1}}>
             <BarChart ylabel='Quantity'
-                    width={520}
-                    height={170}
+                    width={565}
+                    height={220}
                     margin={margin}
                     data={data}/>
           </div>
-          <div style={{display: 'flex',flexDirection: 'column', marginTop: -10}}>
+          <div style={{display: 'flex',flexDirection: 'column', marginTop: 7}}>
           <div style={{flex: 1}}>
             <Card>
-              <CardTitle title="Legal Resources" style={{paddingBottom: 0, marginBottom: -20, alignSelf: 'center'}} />
+              <CardTitle title="Legal Resources" style={{paddingBottom: 0, marginBottom: -60, alignSelf: 'center'}} />
               <List style={{display: 'flex', flexDirection: 'row', alignItems: 'flexEnd', paddingLeft: 200, marginTop: -60}}>
                   <ListItem primaryText="Lawyers for Children LLC" secondaryText="(908) 555-4538"/>
                   <Divider />
@@ -112,7 +113,7 @@ const Community = props => {
           </div>
           <div style={{flex: 1}}>
             <Card>
-              <CardTitle title="Health Resources" style={{paddingBottom: 0, marginBottom: -30, alignSelf: 'center'}} />
+              <CardTitle title="Health Resources" style={{paddingBottom: 0, marginBottom: -60, alignSelf: 'center'}} />
               <List style={{display: 'flex', flexDirection: 'row', alignItems: 'flexEnd', paddingLeft: 200, marginTop: -60}}>
                   <ListItem primaryText="South Jersey Health" secondaryText="(716) 555-1290"/>
                   <Divider />
@@ -122,28 +123,42 @@ const Community = props => {
           </div>
         </div>
       </div>
-        <Card className="Community__content2" style={{marginBottom: 20, marginTop: -10}}>
-           <CardTitle title="Community Stories" style={{fontWeight: 'bold', marginBottom: -20}}/>
-         </Card>
-             <div style={styles.root}>
-               <GridList
-                 cellHeight={180}
-                 style={styles.gridList}
-               >
-               {tilesData.map((tile) => (
-                 <GridTile
-                   key={tile.img}
-                   title={tile.title}
-                   subtitle={<span><b>{tile.author}</b></span>}
-                   actionIcon={<IconButton><StarBorder color="white" /></IconButton>}
-                 >
-                   <p style={{marginLeft: 10, marginBottom: 10}}>{tile.story}
-                   </p>
-                 </GridTile>
-               ))}
-              </GridList>
-            </div>
-        {/* </Card> */}
+
+
+      <Card className="Community__content2" style={{marginBottom: 20, marginTop: -10}}>
+         <CardTitle title="Community Stories" style={{fontWeight: 'bold', marginBottom: -10}} />
+      </Card>
+        <div style={styles.root}>
+          <GridList
+            padding={20}
+            cols={3}
+            cellHeight={'auto'}
+          >
+          {tilesData.map((tile) => (
+            <GridTile>
+              <Card>
+                <CardHeader
+                  title={tile.title}
+                  titleStyle={{ size: 50 }}
+                  subtitle={tile.author}
+                  />
+                <CardText>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
+                  Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
+                  Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+                </CardText>
+                <CardActions>
+                  <FlatButton primary={true} label='Contact User'/>
+                  <FlatButton primary={true} label='Like'/>
+                </CardActions>
+              </Card>
+            </GridTile>
+          ))}
+        </GridList>
+      </div>
+
+
       </div>
     </div>
   )
