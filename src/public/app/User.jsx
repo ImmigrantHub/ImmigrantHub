@@ -11,7 +11,6 @@ import TagArray from './TagArray.jsx';
 import RaisedButton from 'material-ui/RaisedButton';
 import Dialog from 'material-ui/Dialog';
 import Post from './Post.jsx';
-import jquery from 'jquery';
 
 class User extends React.Component {
   constructor() {
