@@ -187,24 +187,36 @@ class User extends React.Component {
                   }
                 </ul>
             </Paper>
-             <CardText>
-               <h2>{this.state.currentStep.title}</h2>
-               <div className="chip-wrapper">
+             <CardText style={{ textAlign: 'center' }}>
+               <h2 style={{margin:'auto'}}>{this.state.currentStep.title}</h2>
+               <div
+                className="chip-wrapper"
+                style={{
+                  textAlign: 'center',
+                  marginBottom: '15px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+              >
                  {this.state.currentStep.tags.map((tag, i)  => {
                   return (<TagArray
                     tags={tag}
                     key={i}
                   />)
                  })}
-               </div>
+              </div>
 
-               <div dangerouslySetInnerHTML={{ __html: this.state.currentStep.content}} />
+              <div
+                dangerouslySetInnerHTML={{ __html: this.state.currentStep.content}}
+                style={{marginBottom: '15px', marginTop: '15px', textAlign: 'left'}}
+              />
 
              </CardText>
              <Divider/>
-             <CardActions>
-             <div>
-               <RaisedButton label="Add a new Step" onClick={this.handleStepOpen} />
+             <CardActions style={{ textAlign: 'center' }}>
+             <div style={{ textAlign: 'center' }}>
+               <RaisedButton primary={true} label="Add a new Step" onClick={this.handleStepOpen} />
                <Dialog
                  title="Add a new step"
                  modal={false}
