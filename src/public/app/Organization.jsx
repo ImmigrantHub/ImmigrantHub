@@ -85,18 +85,57 @@ const Organization = props => {
              avatar="https://2t9qt14cl5rc3ei81o3goyix-wpengine.netdna-ssl.com/wp-content/themes/timber/dist/img/iaai-logo.svg"
            />
            <CardText>
+            <span style={{ fontSize: 20 }}>Communications</span>
+            <Divider style={{ marginTop: 10 }}/>
             <div className='Organization__messages'>
               <List>
-                <span style={{ fontSize: 20 }}>Communications</span>
-                <Divider style={{ marginTop: 10 }}/>
                 <ListItem
-                  leftAvatar={<Avatar src="https://avatars7.githubusercontent.com/u/8907103?v=4&s=460" />}
+                  leftAvatar={<Avatar src="https://avatars6.githubusercontent.com/u/24641661?v=4&s=400" />}
                   rightIconButton={rightIconMenu}
-                  primaryText="Brunch this weekend?"
+                  primaryText="Immigration follow up"
                   secondaryText={
                     <p>
                       <span style={{color: darkBlack}}>Brendan Lim</span> --
-                      I&apos;ll be in your neighborhood doing errands this weekend. Do you want to grab brunch?
+                      Would you like to come in this week and have a debriefing?
+                    </p>
+                  }
+                  secondaryTextLines={2}
+                />
+                <Divider inset={true} />
+                <ListItem
+                  leftAvatar={<Avatar src="https://avatars7.githubusercontent.com/u/8907103?v=4&s=460" />}
+                  rightIconButton={rightIconMenu}
+                  primaryText="Work Visa Progess"
+                  secondaryText={
+                    <p>
+                      <span style={{color: darkBlack}}>Sojung Park</span> --
+                      Sojung, I'm so excited that you've finally been approved
+                    </p>
+                  }
+                  secondaryTextLines={2}
+                />
+                <Divider inset={true} />
+                <ListItem
+                  leftAvatar={<Avatar src="https://avatars5.githubusercontent.com/u/16951204?v=4&s=400"/>}
+                  rightIconButton={rightIconMenu}
+                  primaryText="Worker Rights"
+                  secondaryText={
+                    <p>
+                      <span style={{color: darkBlack}}>Arturo Carballo</span> --
+                      Arturo, I'm sorry that happened. We'll see what we can find on our end.
+                    </p>
+                  }
+                  secondaryTextLines={2}
+                />
+                <Divider inset={true} />
+                <ListItem
+                  leftAvatar={<Avatar src="https://avatars4.githubusercontent.com/u/20608459?v=4&s=400" />}
+                  rightIconButton={rightIconMenu}
+                  primaryText="Student Visa Help"
+                  secondaryText={
+                    <p>
+                      <span style={{color: darkBlack}}>Lisa Hutchinson</span> --
+                      Good luck this year!
                     </p>
                   }
                   secondaryTextLines={2}
@@ -116,13 +155,13 @@ const Organization = props => {
                 />
                 <Divider inset={true} />
                 <ListItem
-                  leftAvatar={<Avatar src="https://avatars7.githubusercontent.com/u/8907103?v=4&s=460" />}
+                  leftAvatar={<Avatar src="https://avatars6.githubusercontent.com/u/24641661?v=4&s=400" />}
                   rightIconButton={rightIconMenu}
-                  primaryText="Brunch this weekend?"
+                  primaryText="Immigration follow up"
                   secondaryText={
                     <p>
                       <span style={{color: darkBlack}}>Brendan Lim</span> --
-                      I&apos;ll be in your neighborhood doing errands this weekend. Do you want to grab brunch?
+                      Would you like to come in this week and have a debriefing?
                     </p>
                   }
                   secondaryTextLines={2}
@@ -131,50 +170,37 @@ const Organization = props => {
                 <ListItem
                   leftAvatar={<Avatar src="https://avatars7.githubusercontent.com/u/8907103?v=4&s=460" />}
                   rightIconButton={rightIconMenu}
-                  primaryText="Brunch this weekend?"
+                  primaryText="Work Visa Progess"
                   secondaryText={
                     <p>
-                      <span style={{color: darkBlack}}>Brendan Lim</span> --
-                      I&apos;ll be in your neighborhood doing errands this weekend. Do you want to grab brunch?
+                      <span style={{color: darkBlack}}>Sojung Park</span> --
+                      Sojung, I'm so excited that you've finally been approved
                     </p>
                   }
                   secondaryTextLines={2}
                 />
                 <Divider inset={true} />
                 <ListItem
-                  leftAvatar={<Avatar src="https://avatars7.githubusercontent.com/u/8907103?v=4&s=460" />}
+                  leftAvatar={<Avatar src="https://avatars5.githubusercontent.com/u/16951204?v=4&s=400"/>}
                   rightIconButton={rightIconMenu}
-                  primaryText="Brunch this weekend?"
+                  primaryText="Worker Rights"
                   secondaryText={
                     <p>
-                      <span style={{color: darkBlack}}>Brendan Lim</span> --
-                      I&apos;ll be in your neighborhood doing errands this weekend. Do you want to grab brunch?
+                      <span style={{color: darkBlack}}>Arturo Carballo</span> --
+                      Arturo, I'm sorry that happened. We'll see what we can find on our end.
                     </p>
                   }
                   secondaryTextLines={2}
                 />
                 <Divider inset={true} />
                 <ListItem
-                  leftAvatar={<Avatar src="https://avatars7.githubusercontent.com/u/8907103?v=4&s=460" />}
+                  leftAvatar={<Avatar src="https://avatars4.githubusercontent.com/u/20608459?v=4&s=400" />}
                   rightIconButton={rightIconMenu}
-                  primaryText="Brunch this weekend?"
+                  primaryText="Student Visa Help"
                   secondaryText={
                     <p>
-                      <span style={{color: darkBlack}}>Brendan Lim</span> --
-                      I&apos;ll be in your neighborhood doing errands this weekend. Do you want to grab brunch?
-                    </p>
-                  }
-                  secondaryTextLines={2}
-                />
-                <Divider inset={true} />
-                <ListItem
-                  leftAvatar={<Avatar src="https://avatars7.githubusercontent.com/u/8907103?v=4&s=460" />}
-                  rightIconButton={rightIconMenu}
-                  primaryText="Brunch this weekend?"
-                  secondaryText={
-                    <p>
-                      <span style={{color: darkBlack}}>Brendan Lim</span> --
-                      I&apos;ll be in your neighborhood doing errands this weekend. Do you want to grab brunch?
+                      <span style={{color: darkBlack}}>Lisa Hutchinson</span> --
+                      Good luck this year!
                     </p>
                   }
                   secondaryTextLines={2}
@@ -205,20 +231,19 @@ const Organization = props => {
           <div className='Organization__radar'>
             <CardText>
               <List>
-                <Subheader>Today</Subheader>
-                <ListItem insetChildren={true} primaryText="Hello!" />
-                <ListItem insetChildren={true} primaryText="Wassup!" />
-                <ListItem insetChildren={true} primaryText="Hey!" />
+                <Subheader>DOCA</Subheader>
+                <ListItem insetChildren={true} primaryText="José" />
+                <ListItem insetChildren={true} primaryText="Giancarlo" />
+                <ListItem insetChildren={true} primaryText="Julia" />
                 <Divider />
-                <Subheader>Today</Subheader>
-                <ListItem insetChildren={true} primaryText="Hello!" />
-                <ListItem insetChildren={true} primaryText="Wassup!" />
-                <ListItem insetChildren={true} primaryText="Hey!" />
+                <Subheader>Undocumented Immigrant</Subheader>
+                <ListItem insetChildren={true} primaryText="Anonymous User 1" />
+                <ListItem insetChildren={true} primaryText="Anonymous User 2" />
+                <ListItem insetChildren={true} primaryText="Anonymous User 3" />
                 <Divider />
-                <Subheader>Today</Subheader>
-                <ListItem insetChildren={true} primaryText="Hello!" />
-                <ListItem insetChildren={true} primaryText="Wassup!" />
-                <ListItem insetChildren={true} primaryText="Hey!" />
+                <Subheader>NYC</Subheader>
+                <ListItem insetChildren={true} primaryText="Lisa Chow" />
+                <ListItem insetChildren={true} primaryText="Adam Voght" />
                 <Divider />
               </List>
             </CardText>
