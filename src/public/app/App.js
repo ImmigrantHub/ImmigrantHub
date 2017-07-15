@@ -10,8 +10,10 @@ import {
 } from 'react-router-dom';
 
 import Login from './Login.jsx';
+import Signin from './Signin.jsx';
 import Organization from './Organization.jsx';
 import User from './User.jsx';
+import Post from './Post.jsx';
 
 class App extends React.Component {
   render() {
@@ -20,6 +22,9 @@ class App extends React.Component {
         <Router>
           <div>
             <Route exact path="/" render={() => (
+              <Signin/>
+            )}/>
+            <Route exact path="/login" render={() => (
               <Login/>
             )}/>
             <Route exact path="/organization" render={() => (
@@ -27,6 +32,9 @@ class App extends React.Component {
             )}/>
             <Route exact path="/user" render={() => (
               <User/>
+            )}/>
+            <Route exact path="/post" render={() => (
+              <Post/>
             )}/>
           </div>
         </Router>

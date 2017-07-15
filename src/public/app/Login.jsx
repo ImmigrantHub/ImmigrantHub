@@ -1,17 +1,23 @@
 import React from 'react';
+import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import TextField from 'material-ui/TextField';
+import RaisedButton from 'material-ui/RaisedButton';
 
 const Login = props => {
   return (
-    <div className="logIn">
-      <h1>login</h1>
-      <div className="logIn__credentials">
-        <div className="logIn__email">
-          email:
+    <div className="landingWrapper">
+      <Card className="signupCard">
+        <div className="signupWrapper">
+          <span className="signupInfo">Username</span>
+          <TextField className="signupInput"/>
+          <span className="signupInfo">Password</span>
+          <TextField className="signupInput" type="password"/>
+          <RaisedButton className="signupButton">
+            Login to ImmigrantHub
+          </RaisedButton>
+          <span className="signupInfo signupInfoSmall"><a href="/#/">I want to create an account!</a></span>
         </div>
-        <div className="logIn__password">
-          password:
-        </div>
-      </div>
+      </Card>
     </div>
   )
 };

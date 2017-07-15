@@ -1,9 +1,82 @@
+html,
+body {
+  height: 100%;
+}
+
 body {
   background-color: #e6e6e6;
   display: flex;
   justify-content: center;
   align-items: center;
+  /*background-image: url('http://www.reapontario.ca/wp-content/uploads/2014/12/bigstock-Multi-ethnic-Group-Of-Students-4413098.jpg');*/
+  /*background-image: url('http://s1.r29static.com//bin/entry/b60/x,80/1770692/image.jpg');*/
+  /*background-image: url('https://znet.ng/wp-content/uploads/2017/01/world-tech-ceos-vs-trump-1-640x426.jpg');*/
+  background-size: cover;
 }
+
+.landingWrapper {
+  max-width: 850px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 460px;
+}
+
+.landingInfo {
+  font-family: 'Roboto', sans-serif;
+  height: 460px;
+  padding: 24px;
+}
+
+.landingTitle {
+  font-size: 54px;
+  font-weight: 100;
+  margin-bottom: 16px;
+}
+
+.landingSubtitle {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.signupWrapper {
+  min-width: 350px;
+  height: 460px;
+  background-color: #fafbfc;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signupInput {
+  margin-bottom: 10px;
+}
+
+.signupInfo {
+  color: #586069 !important;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.signupInfoSmall {
+  color: #6a737d !important;
+  font-size: 14px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.signupButton {
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
 
 .logIn__credentials {
   background-color: white;
@@ -37,4 +110,46 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+/* post */
+
+.postWrapper,
+.postContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.postContent{
+  width: 400px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.postTitle {
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.postTextarea {
+  width: 90%;
+  min-height: 300px;
+  padding: 10px;
+}
+
+.postButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 20px;
+  width: 100%;
 }
