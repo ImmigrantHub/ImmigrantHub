@@ -1,7 +1,6 @@
 import React from 'react';
 import FlatButton from 'material-ui/FlatButton';
 import Toggle from 'material-ui/Toggle';
-import MenuBar from './MenuBar.jsx';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import Divider from 'material-ui/Divider';
 import {List, ListItem} from 'material-ui/List';
@@ -36,9 +35,6 @@ const Organization = props => {
 
   return (
     <div className="Organization">
-
-
-      <MenuBar />
 
       <div className="Organization__cards">
         <Card className="Organization__content1">
