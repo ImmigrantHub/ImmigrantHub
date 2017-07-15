@@ -1,3 +1,14 @@
 body {
-  background-color: lightblue;
+  background-color: grey;
+}
+
+.logIn__credentials {
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
 }
