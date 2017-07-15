@@ -20,7 +20,7 @@ const MenuBar = props => {
   const logout = props.location.pathname === '/' ? "Login" : "Logout";
 
   return (
-    <AppBar 
+    <AppBar
       className="menu"
       title="ImmigrantHub"
       showMenuIconButton={false}
