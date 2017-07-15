@@ -13,6 +13,9 @@ import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 import StarBorder from 'material-ui/svg-icons/toggle/star-border';
 import {GridList, GridTile} from 'material-ui/GridList';
+var Chart = require('react-d3-core').Chart;
+var LineChart = require('react-d3-basic').LineChart;
+
 
 const styles = {
   root: {
@@ -28,49 +31,30 @@ const styles = {
   },
 };
 
-const tilesData = [
-  {
-    img: 'images/grid-list/00-52-29-429_640.jpg',
-    title: 'Breakfast',
-    author: 'jill111',
-  },
-  {
-    img: 'images/grid-list/burger-827309_640.jpg',
-    title: 'Tasty burger',
-    author: 'pashminu',
-  },
-  {
-    img: 'images/grid-list/camera-813814_640.jpg',
-    title: 'Camera',
-    author: 'Danson67',
-  },
-  {
-    img: 'images/grid-list/morning-819362_640.jpg',
-    title: 'Morning',
-    author: 'fancycrave1',
-  },
-  {
-    img: 'images/grid-list/hats-829509_640.jpg',
-    title: 'Hats',
-    author: 'Hans',
-  },
-  {
-    img: 'images/grid-list/honey-823614_640.jpg',
-    title: 'Honey',
-    author: 'fancycravel',
-  },
-  {
-    img: 'images/grid-list/vegetables-790022_640.jpg',
-    title: 'Vegetables',
-    author: 'jill111',
-  },
-  {
-    img: 'images/grid-list/water-plant-821293_640.jpg',
-    title: 'Water plant',
-    author: 'BkrmadtyaKarki',
-  },
-];
+const tilesData = require('./../samplestoriesdata.js');
 
+
+var chartData = require('./../samplegraphdata.js');
+console.log('chartdata',chartData);
+  var width = 700,
+    height = 300,
+    margins = {left: 100, right: 100, top: 50, bottom: 50},
+    title = "User sample",
+    // chart series,
+    // field: is what field your data want to be selected
+    // name: the name of the field that display in legend
+    // color: what color is the line
+    chartSeries = [
+      {
+        field: 'BMI',
+        name: 'BMI',
+        color: '#ff7f0e'
+      }
+    ],
+    // your x accessor
+    x = function(d) {
+      return d.index;
+    }
 
 const Community = props => {
 
@@ -98,11 +82,11 @@ const Community = props => {
       <MenuBar style={{flex: 1, alignSelf: 'stretch'}} />
 
       <div className="Community__cards" style={{justifyContent: 'spaceAround'}}>
-        <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'row'}}>
+        <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'row', marginTop: 40}}>
           <Card className="Community__content1">
-            <CardTitle title="Your Details" style={{paddingBottom: 0, marginBottom: 0}} />
-            <CardText style={{paddingTop: 0, marginTop: -60}}>
-                <List  style={{display: 'flex', flexDirection: 'rowReverse', justifyContent: 'center', paddingLeft: 200}}>
+            <CardTitle title="Your Details" style={{paddingBottom: 0, marginBottom: 0, alignSelf: 'center'}} />
+            <CardText style={{paddingTop: 0, marginTop: -60, alignSelf: 'center'}}>
+                <List  style={{display: 'flex', flexDirection: 'rowReverse', justifyContent: 'center', paddingLeft: 200, alignItems: 'center'}}>
                   <Divider />
                   <ListItem style={{fontWeight: 'bold'}} primaryText="Your Step:" secondaryText="Visa Application"/>
                   <Divider />
@@ -111,9 +95,9 @@ const Community = props => {
             </CardText>
           </Card>
           <Card className="Community__content3">
-            <CardTitle title="The Community" />
-            <CardText style={{paddingTop: 0, marginTop: -80}}>
-              <List  style={{display: 'flex', flexDirection: 'rowReverse', justifyContent: 'center', paddingLeft: 200}}>
+            <CardTitle title="The Community" style={{paddingBottom: 0, marginBottom: 0, alignSelf: 'center'}} />
+            <CardText style={{paddingTop: 0, marginTop: -65, alignSelf: 'center'}}>
+              <List  style={{display: 'flex', flexDirection: 'rowReverse', justifyContent: 'center', paddingLeft: 200, alignItems: 'center'}}>
                   <ListItem style={{fontWeight: 'bold'}} primaryText="At The Same Step As You:" secondaryText="10,000 people" />
                   <Divider />
                   <ListItem style={{fontWeight: 'bold'}} primaryText="Average Wait Time" secondaryText="5 Months" />
@@ -121,8 +105,30 @@ const Community = props => {
             </CardText>
           </Card>
         </div>
+        {/* <div> */}
+          <Card>
+            <Chart
+              title={title}
+              width={width}
+              height={height}
+              margins= {margins}
+            >
+              <LineChart
+                showXGrid= {false}
+                showYGrid= {false}
+                margins= {margins}
+                title={title}
+                data={chartData}
+                width={width}
+                height={height}
+                chartSeries={chartSeries}
+                x={x}
+              />
+            </Chart>
+          </Card>
+        {/* </div> */}
         <Card className="Community__content2">
-           <CardTitle title="Community Stories" />
+           <CardTitle title="Community Stories" style={{fontWeight: 'bold'}}/>
              <div style={styles.root}>
                <GridList
                  cellHeight={180}
@@ -132,10 +138,14 @@ const Community = props => {
                  <GridTile
                    key={tile.img}
                    title={tile.title}
-                   subtitle={<span>by <b>{tile.author}</b></span>}
+                   subtitle={<span><b>{tile.author}</b></span>}
                    actionIcon={<IconButton><StarBorder color="white" /></IconButton>}
                  >
-                   <img src={tile.img} />
+                   <p style={{marginLeft: 10, marginBottom: 10}}>          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                             Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
+                             Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
+                             Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+                   </p>
                  </GridTile>
                ))}
               </GridList>
