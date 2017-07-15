@@ -24,6 +24,7 @@ class App extends React.Component {
       <MuiThemeProvider>
         <Router>
           <div>
+            <MenuBar />
             <Route exact path="/" render={() => (
               <Signin/>
             )}/>

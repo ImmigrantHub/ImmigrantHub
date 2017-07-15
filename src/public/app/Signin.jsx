@@ -3,7 +3,6 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'mat
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import TagArray from './TagArray.jsx';
-import MenuBar from './MenuBar.jsx';
 import { withRouter } from 'react-router'
 
 const languages = [

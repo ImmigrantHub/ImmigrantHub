@@ -1,6 +1,4 @@
 import React from 'react';
-import MenuBar from './MenuBar.jsx';
-
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import Divider from 'material-ui/Divider';
 import {List, ListItem} from 'material-ui/List';
@@ -58,8 +56,6 @@ const Community = props => {
 
   return (
     <div className="Community">
-
-      <MenuBar style={{flex: 1, alignSelf: 'stretch'}} />
 
       <div className="Community__cards" style={{justifyContent: 'spaceAround'}}>
         <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'row', marginTop: 40}}>
