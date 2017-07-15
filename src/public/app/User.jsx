@@ -11,6 +11,11 @@ import TagArray from './TagArray.jsx';
 import RaisedButton from 'material-ui/RaisedButton';
 import Dialog from 'material-ui/Dialog';
 import Post from './Post.jsx';
+<<<<<<< HEAD
+=======
+import TextField from 'material-ui/TextField';
+import Avatar from 'material-ui/Avatar';
+>>>>>>> myBranch11
 
 class User extends React.Component {
   constructor() {
@@ -110,22 +115,45 @@ class User extends React.Component {
       <div className="User">
         <div className="User__cards">
           <Card className="User__content1">
-            <CardHeader
-              title="Communities"
-            />
+            <div className='Organization__communitiesTitle'>
+              <i className="material-icons">face </i>
+              <span>Communities</span>
+            </div>
             <CardText>
-                <List>
-                  <ListItem primaryText="Mexico City" />
-                  <Divider />
-                  <ListItem primaryText="Mexico" />
-                  <Divider />
-                  <ListItem primaryText="Latin America" />
-                </List>
+              <TextField
+                hintText="Search"
+                style={{ width: 206 , marginBottom: 20 }}
+              />
+              <List>
+                <ListItem
+                  primaryText="New York"
+                  rightAvatar={<Avatar src="https://media.timeout.com/images/101705313/image.jpg" />}
+                  style={{ marginBottom: 10, marginTop: -10  }}
+                />
+                <Divider />
+                <ListItem
+                  primaryText="Chicago"
+                  rightAvatar={<Avatar src="http://www.aviewoncities.com/img/chicago/kveus3940s.jpg" />}
+                  style={{ marginBottom: 10, marginTop: 10 }}
+                />
+                <Divider />
+                <ListItem
+                  primaryText="Detroit"
+                  rightAvatar={<Avatar src="http://agbuyp.org/wp-content/uploads/2016/08/detroit1.jpg" />}
+                  style={{ marginBottom: 10, marginTop: 10 }}
+                />
+                <Divider />
+                <ListItem
+                  primaryText="Seattle"
+                  rightAvatar={<Avatar src="http://www.sustainableseattle.org/wp-content/uploads/2015/08/SeattleMunicipleArchive-e1488676312333.jpg" />}
+                  style={{ marginBottom: 10, marginTop: 10 }}
+                />
+              </List>
             </CardText>
           </Card>
           <Card className="User__content2">
              <CardHeader
-               title="Kendrick"
+               title="Hi Kendrick!"
                subtitle="Mexico City"
                avatar="https://avatars7.githubusercontent.com/u/8907103?v=4&s=460"
              />
@@ -185,9 +213,10 @@ class User extends React.Component {
 
           </Card>
           <Card className="User__content3">
-            <CardHeader
-              title="Message Inbox"
-            />
+            <div className='Organization__communitiesTitle'>
+              <i className="material-icons">markunread_mailbox</i>
+              <span>Inbox</span>
+            </div>
             <CardText>
                 <List>
                   <ListItem primaryText="We can help!" />
