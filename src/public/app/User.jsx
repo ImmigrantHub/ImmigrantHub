@@ -24,17 +24,17 @@ class User extends React.Component {
         {
           title: 'Step 1',
           tags: ['HB1, Visa'],
-          content: 'Waryfish flathead catfish, Atlantic silverside, warmouth Sacramento blackfish coley; yellowfin cutthroat trout yellowfin cutthroat trout. Rohu Siamese fighting fish vendace: Cherubfish peladillo, wahoo ladyfish betta daggertooth pike conger squeaker whiff, white croaker. Denticle herring freshwater eel, louvar Japanese eel southern sandfish sweeper dottyback coffinfish. Eel-goby sand lance slickhead'
+          content: 'I worked for Company A (series A, about 20-30 people) for about 3.5 years, starting out with a J-1 visa, and was then overseas for a year with their child company. I came back to the bay area in Feb 2013 on a H-1B1 (Singapore) visa, and the company petitioned for a change of status from H-1B1 to H-1B on my behalf for the FY2013 cap.'
         },
         {
           title: 'Step 2',
           tags: ['Greencard, Indian, Software Engineer'],
-          content: '<div>Tulip glass Saccharification, Yeast Bottom-fermenting Yeast krug. Grainy Conditioning Tank Grainy Ale Crystal malt Balthazar. Bright beer Autolysis Centrifugation Dextrin Estery. Trappist Lagering Pilsner, Steam Beer Microbrewery Carboy! Cask Conditioned Ale Bottom-fermenting Yeast Sweet Decoction Bunghole Pub glass Anaerobic Brewhouse!</div>'
+          content: '<div>Under the recommendation of lawyer B, I was to apply for a B1/B2 (business/tourist) visa, so that I could enter the US to collect my things and eventually return back to Singapore. (Since I had initially only planned to return to Singapore for a short Christmas break, I had left all my belongings in the US.)</div>'
         },
         {
           title: 'Step 3',
           tags: ['Marriage, Naturalization'],
-          content: 'Johnny walker red galliano. The blenheim pisco sour speyburn nog-a-sake–tormore, polish martini stinger. Lochnagar remy martin lime rickey bull shot salty dog heart of fire chupacabra, brandy alexander old grand dad. Craigellachie, “singapore sling jack daniel’s tom and jerry batida mickey slim courvoisier blue hawaii; montgomery man o’war royal arrival colombia,” one-balled dictator'
+          content: 'I went to my naturalization interview yesterday Nov.20th 2013, My interview was slated for 8:30am, got to my interview @ 8:00, a fellow came out and did pre-registration like finger printed n photo right after that i came back to the waiting area and patiently waited my turn, the room had about 5 applicants in there and some folks with their lawyers and family, i was called in 8:45 to be exact by this very Nice IO, very pleasant and accommodating, ask me to swear prior to sitting and requested my green card DL and passport and said are you ready, a lil nervous after after all the good and bad experiences i read and heard about i responded yes and she said we are gonna do the hard part first and started with the questions:'
         },
       ],
       openStep: false,
