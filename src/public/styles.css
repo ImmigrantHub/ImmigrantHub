@@ -89,6 +89,24 @@ body {
   /*margin-bottom: 10px;*/
 }
 
+.landingWrapper2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 610px;
+}
+
+.loginWrapper {
+  min-width: 350px;
+  min-height: 460px;
+  background-color: #fafbfc;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .logIn__credentials {
   background-color: white;
   width: 200px;
