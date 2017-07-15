@@ -11,11 +11,8 @@ import TagArray from './TagArray.jsx';
 import RaisedButton from 'material-ui/RaisedButton';
 import Dialog from 'material-ui/Dialog';
 import Post from './Post.jsx';
-<<<<<<< HEAD
-=======
 import TextField from 'material-ui/TextField';
 import Avatar from 'material-ui/Avatar';
->>>>>>> myBranch11
 
 class User extends React.Component {
   constructor() {
