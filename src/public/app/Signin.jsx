@@ -4,6 +4,7 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import TagArray from './TagArray.jsx';
 import MenuBar from './MenuBar.jsx';
+import { withRouter } from 'react-router'
 
 const languages = [
   'Español',
@@ -29,8 +30,7 @@ class Signin extends React.Component {
     }
 
     this.handleUserLogin = this.handleUserLogin.bind(this);
-    this.handleUsernameUpdate = this.handleUsernameUpdate.bind(this);
-    this.handleEmailUpdate = this.handleEmailUpdate.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
 
   handleUserLogin(event) {
@@ -43,39 +43,38 @@ class Signin extends React.Component {
 
     fetch('/user', {
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify(user),
     })
     .then(res => {
-      this.state.wantHelp ? this.context.router.push('/user') : this.context.router.push('/organization'); 
+      this.state.wantHelp ? this.props.history.push('/user') : this.props.history.push('/organization'); 
     })
   }
 
-  handleUsernameUpdate(e, i, v) {
-    this.setState({username:v});
+  handleInputChange(event) {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+    this.setState({
+      [name]: value,
+    });
   }
-
-  handleEmailUpdate(e, i, v) {
-    this.setState({email:v});
-  }
-
 
   render() {
     return (
-
       <div className="landingWrapper">
-        <MenuBar />
         <div className="landingInfo">
-          <h1 className="landingTitle">Welcome Home!</h1>
-          <h2 className="landingSubtitle">Just as fertile soil is needed for a seed to grow, <b>ImmigrantHub</b> foster an environment that makes it possible for newcomers of all backgrounds to feel valued and to fully participate alongside their neighbors in the social, civic, and economic fabric of their adopted hometowns.</h2>
-
-          <TagArray tags={languages}/>
+          <h1 className="landingTitle">Built by Immigrants for Immigrants!</h1>
+          <h2 className="landingSubtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do <b>eiusmod</b> uti <b>tempor incididunt</b> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</h2>
         </div>
         <Card className="signupCard">
           <form onSubmit={this.handleUserLogin} className="signupWrapper">
             <span className="signupInfo">Username</span>
-            <TextField className="signupInput" onChange={this.handleUsernameUpdate} />
+            <TextField name="username" className="signupInput" onChange={this.handleInputChange} />
             <span className="signupInfo">Email</span>
-            <TextField className="signupInput" type="email" onChange={this.handleEmailUpdate} />
+            <TextField name="email" className="signupInput" type="email" onChange={this.handleInputChange} />
             <span className="signupInfo">Password</span>
             <TextField className="signupInput" type="password"/>
             <span className="signupInfo signupInfoSmall">Use at least one letter, one numeral, and seven characters.</span>
@@ -92,12 +91,12 @@ class Signin extends React.Component {
 
             <RaisedButton type="submit" className="signupButton" label="Signup for ImmigrantHub" />
           </form>
-          <span className="signupInfo signupInfoSmall">By clicking "Sign up for ImmigrantHub", you agree to our terms of service and privacy policy. We’ll occasionally send you account related emails.</span>
-          <span className="signupInfo signupInfoSmall"><a href="/#/login">I already have an account!</a></span>
+        
+          <div className="signupInfo signupInfoSmall"><a href="/#/login">I already have an account!</a></div>
         </Card>
       </div>
     )
   }
 };
 
-export default Signin;
+export default withRouter(Signin);

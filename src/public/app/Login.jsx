@@ -38,7 +38,6 @@ class Login extends React.Component {
       </div>
     )
   }
->>>>>>> signup func
 };
 
 export default Login;

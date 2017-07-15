@@ -5,9 +5,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {
   HashRouter as Router,
   Route,
-  // Link,
-  // Redirect,
-  // withRouter,
+  Link,
+  Redirect,
+  withRouter,
 } from 'react-router-dom';
 
 import Login from './Login.jsx';
