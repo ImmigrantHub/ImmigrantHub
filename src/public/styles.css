@@ -137,10 +137,12 @@ body {
   height: 600px;
 }
 
+
 .Organization__messages {
   overflow: auto;
   height: 408px;
 }
+
 
 /* post */
 
@@ -183,3 +185,16 @@ body {
   padding-top: 20px;
   width: 100%;
 }
+/*Timeline progress bar  */
+.timeline {
+  width: 100%;
+  height: 75px;
+}
+
+.timeline-box-1, .timeline-box-2, .timeline-box-3, {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: red;
+}
+

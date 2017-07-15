@@ -2,6 +2,7 @@ import React from 'react';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import Divider from 'material-ui/Divider';
 import {List, ListItem} from 'material-ui/List';
+import Paper from 'material-ui/Paper';
 
 const User = props => {
   return (
@@ -28,7 +29,15 @@ const User = props => {
            subtitle="New York"
            avatar="https://avatars7.githubusercontent.com/u/8907103?v=4&s=460"
          />
-         <CardTitle title="Card title" subtitle="Card subtitle" />
+         <CardTitle title="Story" subtitle="Track your progress" />
+        <Paper zDepth={2} rounded={false}> 
+          <div className="timeline">
+            <div className="timeline-bar"></div>
+            <div className="timeline-box-1"></div>
+            <div className="timeline-box-2"></div>
+            <div className="timeline-box-3"></div>
+          </div>
+        </Paper>
          <CardText>
            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
            Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
