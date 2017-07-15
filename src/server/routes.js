@@ -38,7 +38,7 @@ module.exports = (app, express) => {
         return new Timeline({
           user_id: model.id,
           task,
-          begin_date: new Date()
+          begin_date: new Date(),
           end_date: end_date || null,
           story: story || null,
           beacon: beacon || null,
@@ -96,4 +96,3 @@ module.exports = (app, express) => {
   })
 
 };
-
