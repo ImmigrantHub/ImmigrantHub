@@ -1,0 +1,8 @@
+# Mac OSX
+.DS_Store
+
+# bundle
+src/public/dist/
+
+# npm
+node_modules/
