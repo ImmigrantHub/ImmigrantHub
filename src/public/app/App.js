@@ -1,10 +1,12 @@
 import React from 'react';
+import Login from './Login.jsx';
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        Hello World!
+        <h1>immigrantHUB</h1>
+        <Login/>
       </div>
     );
   }
