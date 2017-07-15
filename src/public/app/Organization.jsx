@@ -53,7 +53,7 @@ const Organization = props => {
               <ListItem
                 primaryText="New York"
                 rightAvatar={<Avatar src="https://media.timeout.com/images/101705313/image.jpg" />}
-                style={{ marginBottom: 10, marginTop: -10  }}
+                style={{ marginBottom: 10, marginTop: -10 }}
               />
               <Divider />
               <ListItem
@@ -229,20 +229,20 @@ const Organization = props => {
           <div className='Organization__radar'>
             <CardText>
               <List>
-                <Subheader>DOCA</Subheader>
-                <ListItem insetChildren={true} primaryText="José" />
-                <ListItem insetChildren={true} primaryText="Giancarlo" />
-                <ListItem insetChildren={true} primaryText="Julia" />
-                <Divider />
-                <Subheader>Undocumented Immigrant</Subheader>
-                <ListItem insetChildren={true} primaryText="Anonymous User 1" />
-                <ListItem insetChildren={true} primaryText="Anonymous User 2" />
-                <ListItem insetChildren={true} primaryText="Anonymous User 3" />
-                <Divider />
-                <Subheader>NYC</Subheader>
-                <ListItem insetChildren={true} primaryText="Lisa Chow" />
-                <ListItem insetChildren={true} primaryText="Adam Voght" />
-                <Divider />
+                <Subheader style={{backgroundColor: '#F4F4F4'}}>DOCA</Subheader>
+                <ListItem insetChildren={true} primaryText="José" style={{ marginLeft: '-25px' }}/>
+                <ListItem insetChildren={true} primaryText="Giancarlo" style={{ marginLeft: '-25px' }} />
+                <ListItem insetChildren={true} primaryText="Julia" style={{ marginLeft: '-25px' }}/>
+                {/* <Divider /> */}
+                <Subheader style={{backgroundColor: '#F4F4F4'}}>Undocumented Immigrant</Subheader>
+                <ListItem insetChildren={true} primaryText="Anonymous User 1" style={{ marginLeft: '-25px' }}/>
+                <ListItem insetChildren={true} primaryText="Anonymous User 2" style={{ marginLeft: '-25px' }}/>
+                <ListItem insetChildren={true} primaryText="Anonymous User 3" style={{ marginLeft: '-25px' }}/>
+                {/* <Divider /> */}
+                <Subheader style={{backgroundColor: '#F4F4F4'}}>NYC</Subheader>
+                <ListItem insetChildren={true} primaryText="Lisa Chow" style={{ marginLeft: '-25px' }}/>
+                <ListItem insetChildren={true} primaryText="Adam Voght" style={{ marginLeft: '-25px' }}/>
+                {/* <Divider /> */}
               </List>
             </CardText>
           </div>

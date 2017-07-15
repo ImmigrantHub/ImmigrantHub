@@ -1,41 +1,41 @@
 module.exports = [
   {
-    img: 'images/grid-list/00-52-29-429_640.jpg',
+    story: 'I arrived at Gatwick in June 2002 when the World Cup was in full swing. I was proud of the Senegalese team. I am sure so was the whole of Africa. A Zimbabwean calling England home',
     title: 'John',
     author: 'New York City',
   },
   {
-    img: 'images/grid-list/burger-827309_640.jpg',
+    story: 'I have always loved reading. All I ever wanted to do was read, read, read. Literature was not my hobby, but - like Kafka said - "what I am made of',
     title: 'Tanya',
     author: 'Boston',
   },
   {
-    img: 'images/grid-list/camera-813814_640.jpg',
+    story: 'I decided to move to the UK because of the brutal governance of Mugabe and his Zanu PF ministers in Zimbabwe.',
     title: 'Danielle',
     author: 'Oklahoma City',
   },
   {
-    img: 'images/grid-list/morning-819362_640.jpg',
+    story: 'I was shopping around for a place to study my masters in 2008 and my boyfriend convinced me to come to Scotland. Leaving Kenya was a big burden.',
     title: 'Melanie',
-    author: 'Cleveland',
+    author: 'New York',
   },
   {
-    img: 'images/grid-list/hats-829509_640.jpg',
+    story: 'Life in Afghanistan was very bad for those people who worked with the international security assistance force (ISAF). After the war, the situation got even more worse.',
     title: 'Sophia',
     author: 'Golden State',
   },
   {
-    img: 'images/grid-list/honey-823614_640.jpg',
+    story: 'I first came here from Bulgaria in 1997 to work on a Kent farm over the summer. It was hard work but I loved it, along with meeting new people and exploring this beautiful country. Life just happens, it doesn\'t check your nationality first!',
     title: 'Michael',
     author: 'San Antonio',
   },
   {
-    img: 'images/grid-list/vegetables-790022_640.jpg',
+    story: 'The software industry in Pakistan is very young and small, so as an engineer I spend most of the time working as offshore office for US firms. Ahmed - six reasons why I love the UK',
     title: 'Jeff',
     author: 'Washington',
   },
   {
-    img: 'images/grid-list/water-plant-821293_640.jpg',
+    story: 'After four years living, studying and working in the UK, I have come across some problems with lack of support from governmental organisations when I most needed it, making me feel rather unwelcome. The trouble with bein an EU national',
     title: 'Natalia',
     author: 'Portland',
   },

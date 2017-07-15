@@ -91,34 +91,40 @@ const Community = props => {
             </CardText>
           </Card>
         </div>
-        <div style={{display: 'flex', flexDirection: 'row', marginBottom: 10}}>
+        <div style={{display: 'flex', flexDirection: 'row', marginBottom: 10, flexGrow: 1}}>
           <div style={{flex: 1}}>
             <BarChart ylabel='Quantity'
-                    width={500}
-                    height={200}
+                    width={520}
+                    height={170}
                     margin={margin}
                     data={data}/>
           </div>
-          <div style={{display: 'flex', flex: 1, flexDirection: 'column'}}>
-          <div style={{flex: 1, marginRight: 10}}>
+          <div style={{display: 'flex',flexDirection: 'column', marginTop: -10}}>
+          <div style={{flex: 1}}>
             <Card>
-              <CardTitle title="Legal Resources" style={{fontWeight: 'bold', paddingBottom: 0, marginBottom: -20, alignSelf: 'center'}} />
+              <CardTitle title="Legal Resources" style={{paddingBottom: 0, marginBottom: -20, alignSelf: 'center'}} />
               <List style={{display: 'flex', flexDirection: 'row', alignItems: 'flexEnd', paddingLeft: 200, marginTop: -60}}>
-                  <ListItem primaryText="Lawyers for Children LLC" secondaryText="(908)555-4538"/>
+                  <ListItem primaryText="Lawyers for Children LLC" secondaryText="(908) 555-4538"/>
                   <Divider />
-                  <ListItem primaryText="NY Immigration Attorney" secondaryText="(917)555-0342" />
+                  <ListItem primaryText="NY Immigration Attorney" secondaryText="(917) 555-0342" />
                 </List>
             </Card>
           </div>
           <div style={{flex: 1}}>
             <Card>
-              <CardTitle title="Health Resources" style={{paddingBottom: 0, marginBottom: 0, alignSelf: 'center'}} />
+              <CardTitle title="Health Resources" style={{paddingBottom: 0, marginBottom: -30, alignSelf: 'center'}} />
+              <List style={{display: 'flex', flexDirection: 'row', alignItems: 'flexEnd', paddingLeft: 200, marginTop: -60}}>
+                  <ListItem primaryText="South Jersey Health" secondaryText="(716) 555-1290"/>
+                  <Divider />
+                  <ListItem primaryText="Executive Health" secondaryText="(917) 555-3924" />
+                </List>
             </Card>
           </div>
         </div>
       </div>
-        <Card className="Community__content2" style={{marginBottom: 20}}>
+        <Card className="Community__content2" style={{marginBottom: 20, marginTop: -10}}>
            <CardTitle title="Community Stories" style={{fontWeight: 'bold', marginBottom: -20}}/>
+         </Card>
              <div style={styles.root}>
                <GridList
                  cellHeight={180}
@@ -131,16 +137,13 @@ const Community = props => {
                    subtitle={<span><b>{tile.author}</b></span>}
                    actionIcon={<IconButton><StarBorder color="white" /></IconButton>}
                  >
-                   <p style={{marginLeft: 10, marginBottom: 10}}>          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                             Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-                             Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-                             Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+                   <p style={{marginLeft: 10, marginBottom: 10}}>{tile.story}
                    </p>
                  </GridTile>
                ))}
               </GridList>
             </div>
-        </Card>
+        {/* </Card> */}
       </div>
     </div>
   )
