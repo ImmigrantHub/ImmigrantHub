@@ -12,16 +12,21 @@ module.exports = (app, express) => {
   });
 
   app.get('/user', (req, res) => {
-    User.where('email', req.header.email)
+    console.log('Get User info: ', req.headers.email)
+    User.where('email', req.headers.email)
       .fetch()
-      .then(model => res.send(model))
+      .then(model => {
+        Timeline.where('user_id', model.id)
+          .fetchAll()
+          .then(models => res.send(models))
+      })
   })
 
   app.post('/user', (req, res) => {
     console.log('Create User: ', req.body);
-    const userObj = req.body;
-    return new User({userObj}).save()
-    .then(model => model);
+    const {email, password} = req.body;
+    return new User({email, password}).save()
+    .then(model => res.send(model));
   })
 
   app.get('/event/:userId', (req, res) => {
@@ -32,13 +37,13 @@ module.exports = (app, express) => {
 
   app.post('/event', (req, res) => {
     console.log('Create event: ', req.body);
-    const {task, end_date, story, beacon } = req.body;
+    const {task, end_date, begin_date, story, beacon } = req.body;
     User.where('email', req.body.email).fetch()
       .then(model => {
-        return new Timeline({
+        new Timeline({
           user_id: model.id,
           task,
-          begin_date: new Date(),
+          begin_date: begin_date || new Date(),
           end_date: end_date || null,
           story: story || null,
           beacon: beacon || null,
@@ -50,7 +55,7 @@ module.exports = (app, express) => {
               .fetch()
               .then(returnTag => {
                 if(returnTag) {
-                  return new TagTimeline({
+                  new TagTimeline({
                     tag_id: returnTag.id,
                     timeline_id: model.id
                   })
@@ -65,10 +70,11 @@ module.exports = (app, express) => {
                       timeline_id: model.id
                     })
                     .save()
-                    .then(model => model)
+                    .then(model => model);
                   })
                 }
               })
+              .then(model => res.send(model))
           })
         })
       })
@@ -78,16 +84,47 @@ module.exports = (app, express) => {
 
   app.put('/:eventId', (req, res) => {
     console.log('Update event: ', req.body);
-    Timeline.where('id', parseInt(req.params.eventId, 10))
+     const {task, end_date, begin_date, story, beacon, tags, event_id } = req.body;
+    Timeline.where('id', event_id)
       .fetch()
       .then(model => {
         if(!model) {
           res.status(404).send();
         } else {
-          return model.save(req.body, { patch: true});
+          console.log('here')
+          return model.save({
+            user_id: model.id,
+            task,
+            begin_date: begin_date || new Date(),
+            end_date: end_date || null,
+            story: story || null,
+            beacon: beacon || null,
+          }, { patch: true});
         }
       })
-      .then(model => res.send(model));
+      .then(model => {
+        res.send(model);
+        return model
+      })
+      .then(model => {
+        tags.forEach(tag => {
+          Tag.where('tag', tag)
+          .fetch()
+          .then(model => {
+            if(!model) {
+              new Tag({tag})
+              .save()
+              .then(newTag => {
+                new TagTimeline({tag_id: newTag.id, timeline_id: event_id})
+                .save()
+              })
+            } else {
+              new TagTimeline({tag_id: model.id, timeline_id: event_id})
+                .save()
+            }
+          })
+        })
+      })
       // UPDATE FOR TAG CHANGES AND BEACON CHANGES!
   })
 
@@ -96,3 +133,4 @@ module.exports = (app, express) => {
   })
 
 };
+ 
