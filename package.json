@@ -5,7 +5,9 @@
   "dependencies": {
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.2",
+    "bookshelf": "^0.10.3",
     "express": "^4.15.3",
+    "knex": "^0.13.0",
     "morgan": "^1.8.2",
     "nodemon": "^1.11.0",
     "react": "^15.6.1",
