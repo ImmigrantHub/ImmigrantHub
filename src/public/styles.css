@@ -8,19 +8,17 @@ body {
   background-color: #e6e6e6;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   /*background-image: url('http://www.reapontario.ca/wp-content/uploads/2014/12/bigstock-Multi-ethnic-Group-Of-Students-4413098.jpg');*/
   /*background-image: url('http://s1.r29static.com//bin/entry/b60/x,80/1770692/image.jpg');*/
   /*background-image: url('https://znet.ng/wp-content/uploads/2017/01/world-tech-ceos-vs-trump-1-640x426.jpg');*/
   /*background-image: url('https://fthmb.tqn.com/spaZKVnogQzg2AxDK-CDwOa6VMM=/1500x1000/filters:no_upscale():fill(FFCC00,1)/about/DonaldTrumpFunnyFace-58b1bd865f9b5860460f82ed.jpg');*/
   background-size: cover;
+  margin-top: 20px;
 }
 
 .menu {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  /*width: 1080px !important;*/
+  width: 1120px !important;
 }
 
 .landingWrapper {
@@ -73,7 +71,6 @@ body {
 .signupInfoSmall {
   color: #6a737d !important;
   font-size: 14px;
-  max-width: 300px;
   text-align: center;
 }
 
@@ -113,19 +110,19 @@ body {
 }
 
 .User__content1 {
-  width: 200px;
+  width: 240px;
   height: 600px;
 }
 .User__content2 {
   font-family: 'Roboto', sans-serif;
   width: 600px;
    height: 600px;
-  margin-right: 40px;
-  margin-left: 40px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .User__content3 {
-  width: 200px;
+  width: 240px;
   height: 600px;
 }
 
@@ -145,23 +142,96 @@ body {
 }
 
 .Organization__content1 {
-  width: 200px;
+  width: 240px;
   height: 600px;
 }
 .Organization__content2 {
   font-family: 'Roboto', sans-serif;
   width: 600px;
   height: 600px;
-  margin-right: 40px;
-  margin-left: 40px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .Organization__content3 {
-  width: 200px;
+  width: 240px;
   height: 600px;
 }
 
 .Organization__messages {
+  overflow: auto;
+  height: 408px;
+}
+
+.Organization__radarTitle {
+  font-size: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(0, 188, 212, 1);
+  color: white;
+}
+
+.Organization__communitiesTitle {
+  font-size: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(0, 188, 212, 1);
+  color: white;
+}
+
+.Organization__radarTitle i, .Organization__communitiesTitle i {
+  margin-right: 10px;
+}
+
+.Organization__radar {
+  overflow: auto;
+  height: 546px;
+}
+/* Community */
+
+.Community {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Community__cards {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.Community__content1 {
+  flex: 1;
+  height: 80px;
+  margin-bottom: 20px;
+  margin-right: 5px;
+}
+.Community__content2 {
+  font-family: 'Roboto', sans-serif;
+  /*width: 1000px;
+  height: 600px;*/
+  /*margin-right: 40px;
+  margin-left: 40px;*/
+}
+
+.Community__content3 {
+  flex: 1;
+  height: 80px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+.Community__messages {
   overflow: auto;
   height: 408px;
 }
@@ -233,6 +303,8 @@ body {
 .timeline-list {
   display: flex;
   padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 li {
@@ -241,7 +313,7 @@ li {
   text-align: center;
   line-height: 2em;
   border-radius: 1em;
-  background: dodgerblue;
+  background: rgba(0, 188, 212, 1);
   margin: 0 1em;
   display: inline-block;
   color: white;
@@ -255,11 +327,9 @@ li::before{
   left: -2em;
   width: 2em;
   height: .2em;
-  background: dodgerblue;
+  background: rgba(0, 188, 212, 0.6);
   z-index: 0;
 }
-
-
 
 li:first-child::before {
   display: none;
@@ -270,7 +340,7 @@ li:first-child::before {
 }
 
 .active ~ li {
-  background: red;
+  background: #F72222;
 }
 
 .active ~ li::before {
@@ -291,4 +361,29 @@ li:first-child::before {
 .chip-wrapper {
   display: flex;
   flex-wrap: wrap;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
 }
