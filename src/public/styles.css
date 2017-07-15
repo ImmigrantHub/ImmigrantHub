@@ -159,7 +159,8 @@ body {
 
 .Organization__messages {
   overflow: auto;
-  height: 408px;
+  height: 500px;
+  margin-top: -20px;
 }
 
 .Organization__radarTitle {
