@@ -19,11 +19,11 @@ class Login extends React.Component {
   handleUserSubmit() {}
 
   render() {
-    
+
     return (
-      <div className="landingWrapper">
+      <div className="landingWrapper2">
         <Card className="signupCard">
-          <div className="signupWrapper">
+          <div className="loginWrapper">
             <span className="signupInfo">Username</span>
             <TextField className="signupInput"/>
             <span className="signupInfo">Password</span>
