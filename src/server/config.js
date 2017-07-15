@@ -33,6 +33,7 @@ db.knex.schema.hasTable('timelines').then((exists) => {
         timeline.date('begin_date');
         timeline.date('end_date');
         timeline.string('story', 1000);
+        timeline.boolean('beacon')
       }).then((table) => {
         console.log('Created "timelines" Table', table);
       });

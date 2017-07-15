@@ -23,21 +23,56 @@ module.exports = (app, express) => {
     .then(model => model);
   })
 
+  app.get('/event/:userId', (req, res) => {
+    Event.where('user_id', parseInt(req.params.userId))
+    .fetchAll()
+    .then(models => res.send(models))
+  })
+
   app.post('/event', (req, res) => {
     console.log('Create event: ', req.body);
-    const eventObj = req.body;
+    const {task, end_date, story, beacon } = req.body;
     User.where('email', req.body.email).fetch()
       .then(model => {
         return new Timeline({
           user_id: model.id,
-          task: eventObj.task,
-          begin_date: eventObj.begin_date,
-          end_date: eventObj.end_date || null,
-          story: eventObj.story,
+          task,
+          begin_date: new Date()
+          end_date: end_date || null,
+          story: story || null,
+          beacon: beacon || null,
         })
         .save()
-        .then(model => model)
+        .then(model => {
+          req.body.tags.forEach(tag => {
+            Tag.where('tag', tag)
+              .fetch()
+              .then(returnTag => {
+                if(returnTag) {
+                  return new TagTimeline({
+                    tag_id: returnTag.id,
+                    timeline_id: model.id
+                  })
+                  .save()
+                  .then(model => model)
+                } else {
+                  return new Tag({tag})
+                  .save()
+                  .then(newTag => {
+                    return new TagTimeline({
+                      tag_id: newTag.id,
+                      timeline_id: model.id
+                    })
+                    .save()
+                    .then(model => model)
+                  })
+                }
+              })
+          })
+        })
       })
+
+    // if beacon = true!
   })
 
   app.put('/:eventId', (req, res) => {
@@ -52,6 +87,11 @@ module.exports = (app, express) => {
         }
       })
       .then(model => res.send(model));
+      // UPDATE FOR TAG CHANGES AND BEACON CHANGES!
+  })
+
+  app.post('/tag', (req, res) => {
+
   })
 
 };
