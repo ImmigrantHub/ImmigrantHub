@@ -11,6 +11,7 @@ import IconButton from 'material-ui/IconButton';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
+import TextField from 'material-ui/TextField';
 
 
 const Organization = props => {
@@ -40,19 +41,40 @@ const Organization = props => {
 
       <div className="Organization__cards">
         <Card className="Organization__content1">
-          <CardHeader
-            title="Notifications"
-          />
+          <div className='Organization__communitiesTitle'>
+            <i className="material-icons">face </i>
+            <span>Communities</span>
+          </div>
           <CardText>
-              <List>
-                <ListItem primaryText="Help!" />
-                <Divider />
-                <ListItem primaryText="Help!" />
-                <Divider />
-                <ListItem primaryText="Help!" />
-                <Divider />
-                <ListItem primaryText="Help!" />
-              </List>
+            <TextField
+              hintText="Search"
+              style={{ width: 206 , marginBottom: 20 }}
+            />
+            <List>
+              <ListItem
+                primaryText="New York"
+                rightAvatar={<Avatar src="https://media.timeout.com/images/101705313/image.jpg" />}
+                style={{ marginBottom: 10, marginTop: -10  }}
+              />
+              <Divider />
+              <ListItem
+                primaryText="Chicago"
+                rightAvatar={<Avatar src="http://www.aviewoncities.com/img/chicago/kveus3940s.jpg" />}
+                style={{ marginBottom: 10, marginTop: 10 }}
+              />
+              <Divider />
+              <ListItem
+                primaryText="Detroit"
+                rightAvatar={<Avatar src="http://agbuyp.org/wp-content/uploads/2016/08/detroit1.jpg" />}
+                style={{ marginBottom: 10, marginTop: 10 }}
+              />
+              <Divider />
+              <ListItem
+                primaryText="Seattle"
+                rightAvatar={<Avatar src="http://www.sustainableseattle.org/wp-content/uploads/2015/08/SeattleMunicipleArchive-e1488676312333.jpg" />}
+                style={{ marginBottom: 10, marginTop: 10 }}
+              />
+            </List>
           </CardText>
         </Card>
         <Card className="Organization__content2">
@@ -61,11 +83,50 @@ const Organization = props => {
              subtitle="New York"
              avatar="https://2t9qt14cl5rc3ei81o3goyix-wpengine.netdna-ssl.com/wp-content/themes/timber/dist/img/iaai-logo.svg"
            />
-           <CardTitle title="Thanks for your support!" subtitle="Yeayuh!" />
            <CardText>
             <div className='Organization__messages'>
               <List>
-                <Subheader>Today</Subheader>
+                <span style={{ fontSize: 20 }}>Communications</span>
+                <Divider style={{ marginTop: 10 }}/>
+                <ListItem
+                  leftAvatar={<Avatar src="https://avatars7.githubusercontent.com/u/8907103?v=4&s=460" />}
+                  rightIconButton={rightIconMenu}
+                  primaryText="Brunch this weekend?"
+                  secondaryText={
+                    <p>
+                      <span style={{color: darkBlack}}>Brendan Lim</span> --
+                      I&apos;ll be in your neighborhood doing errands this weekend. Do you want to grab brunch?
+                    </p>
+                  }
+                  secondaryTextLines={2}
+                />
+                <Divider inset={true} />
+                <ListItem
+                  leftAvatar={<Avatar src="https://avatars7.githubusercontent.com/u/8907103?v=4&s=460" />}
+                  rightIconButton={rightIconMenu}
+                  primaryText="Brunch this weekend?"
+                  secondaryText={
+                    <p>
+                      <span style={{color: darkBlack}}>Brendan Lim</span> --
+                      I&apos;ll be in your neighborhood doing errands this weekend. Do you want to grab brunch?
+                    </p>
+                  }
+                  secondaryTextLines={2}
+                />
+                <Divider inset={true} />
+                <ListItem
+                  leftAvatar={<Avatar src="https://avatars7.githubusercontent.com/u/8907103?v=4&s=460" />}
+                  rightIconButton={rightIconMenu}
+                  primaryText="Brunch this weekend?"
+                  secondaryText={
+                    <p>
+                      <span style={{color: darkBlack}}>Brendan Lim</span> --
+                      I&apos;ll be in your neighborhood doing errands this weekend. Do you want to grab brunch?
+                    </p>
+                  }
+                  secondaryTextLines={2}
+                />
+                <Divider inset={true} />
                 <ListItem
                   leftAvatar={<Avatar src="https://avatars7.githubusercontent.com/u/8907103?v=4&s=460" />}
                   rightIconButton={rightIconMenu}
@@ -136,20 +197,31 @@ const Organization = props => {
            </CardText>
         </Card>
         <Card className="Organization__content3">
-          <CardHeader
-            title="Communities"
-          />
-          <CardText>
+          <div className='Organization__radarTitle'>
+            <i className="material-icons">track_changes</i>
+            <span>Radar</span>
+          </div>
+          <div className='Organization__radar'>
+            <CardText>
               <List>
-                <ListItem primaryText="Hello!" />
+                <Subheader>Today</Subheader>
+                <ListItem insetChildren={true} primaryText="Hello!" />
+                <ListItem insetChildren={true} primaryText="Wassup!" />
+                <ListItem insetChildren={true} primaryText="Hey!" />
                 <Divider />
-                <ListItem primaryText="Wassup!" />
+                <Subheader>Today</Subheader>
+                <ListItem insetChildren={true} primaryText="Hello!" />
+                <ListItem insetChildren={true} primaryText="Wassup!" />
+                <ListItem insetChildren={true} primaryText="Hey!" />
                 <Divider />
-                <ListItem primaryText="Hey!" />
+                <Subheader>Today</Subheader>
+                <ListItem insetChildren={true} primaryText="Hello!" />
+                <ListItem insetChildren={true} primaryText="Wassup!" />
+                <ListItem insetChildren={true} primaryText="Hey!" />
                 <Divider />
-                <ListItem primaryText="Sup?" />
               </List>
-          </CardText>
+            </CardText>
+          </div>
         </Card>
       </div>
     </div>
