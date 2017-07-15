@@ -63,11 +63,14 @@ class Signin extends React.Component {
 
   render() {
     return (
+      <div className='test'>
       <div className="landingWrapper">
+
         <div className="landingInfo">
           <h1 className="landingTitle">Welcome Home!</h1>
           <h2 className="landingSubtitle">Just as fertile soil is needed for a seed to grow, <b>ImmigrantHub</b> foster an environment that makes it possible for newcomers of all backgrounds to feel valued and to fully participate alongside their neighbors in the social, civic, and economic fabric of their adopted hometowns.</h2>
         </div>
+
         <Card className="signupCard">
           <form onSubmit={this.handleUserLogin} className="signupWrapper">
             <div style={{
@@ -102,6 +105,7 @@ class Signin extends React.Component {
           <div className="signupInfo signupInfoSmall"><a href="/#/login">I already have an account!</a></div>
         </Card>
       </div>
+    </div>
     )
   }
 };
