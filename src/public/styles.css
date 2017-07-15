@@ -137,6 +137,11 @@ body {
   height: 600px;
 }
 
+.Organization__messages {
+  overflow: auto;
+  height: 408px;
+}
+
 /* post */
 
 .postWrapper,
