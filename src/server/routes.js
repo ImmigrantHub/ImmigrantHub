@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 
 const Tag = require('./models/tags.js');
 const TagTimeline = require('./models/tagTimelines.js');
@@ -7,7 +6,6 @@ const Timeline = require('./models/timelines.js');
 const User = require('./models/users.js');
 
 
->>>>>>> cd14f3c8952175958f13405e4d9ffc0d59c5dee3
 module.exports = (app, express) => {
 
   app.get('/', (req, res) => {
@@ -136,7 +134,3 @@ module.exports = (app, express) => {
   })
 
 };
-<<<<<<< HEAD
-=======
- 
->>>>>>> cd14f3c8952175958f13405e4d9ffc0d59c5dee3
