@@ -41,17 +41,17 @@ const Organization = props => {
       <div className="Organization__cards">
         <Card className="Organization__content1">
           <CardHeader
-            title="Notifications"
+            title="Communities"
           />
           <CardText>
               <List>
-                <ListItem primaryText="Help!" />
+                <ListItem primaryText="New York" />
                 <Divider />
-                <ListItem primaryText="Help!" />
+                <ListItem primaryText="Chicago" />
                 <Divider />
-                <ListItem primaryText="Help!" />
+                <ListItem primaryText="Detroit" />
                 <Divider />
-                <ListItem primaryText="Help!" />
+                <ListItem primaryText="Seattle" />
               </List>
           </CardText>
         </Card>
@@ -137,7 +137,7 @@ const Organization = props => {
         </Card>
         <Card className="Organization__content3">
           <CardHeader
-            title="Communities"
+            title="Radar"
           />
           <CardText>
               <List>

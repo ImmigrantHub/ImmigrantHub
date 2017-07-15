@@ -228,6 +228,8 @@ body {
 
 .timeline-list {
   padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 li {
@@ -236,7 +238,7 @@ li {
   text-align: center;
   line-height: 2em;
   border-radius: 1em;
-  background: dodgerblue;
+  background: rgba(0, 188, 212, 1);
   margin: 0 1em;
   display: inline-block;
   color: white;
@@ -250,26 +252,24 @@ li::before{
   left: -2em;
   width: 2em;
   height: .2em;
-  background: dodgerblue;
+  background: rgba(0, 188, 212, 0.6);
   z-index: 0;
 }
-
-
 
 li:first-child::before {
   display: none;
 }
 
 .active {
-  background: dodgerblue;
+  background: rgba(0, 188, 212, 0.5);
 }
 
 .active ~ li {
-  background: red;
+  background: #F72222;
 }
 
 .active ~ li::before {
-  background: lightblue;
+  background: rgba(0, 188, 212, 0.3);
 }
 
 .chip {
