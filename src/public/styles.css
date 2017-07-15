@@ -1,3 +1,267 @@
+html,
 body {
-  background-color: lightblue;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-image: url('http://www.reapontario.ca/wp-content/uploads/2014/12/bigstock-Multi-ethnic-Group-Of-Students-4413098.jpg');*/
+  /*background-image: url('http://s1.r29static.com//bin/entry/b60/x,80/1770692/image.jpg');*/
+  /*background-image: url('https://znet.ng/wp-content/uploads/2017/01/world-tech-ceos-vs-trump-1-640x426.jpg');*/
+  background-size: cover;
+}
+
+.menu {
+  width: 1080px !important;
+}
+
+.landingWrapper {
+  max-width: 850px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 460px;
+}
+
+.landingInfo {
+  font-family: 'Roboto', sans-serif;
+  height: 460px;
+  padding: 24px;
+}
+
+.landingTitle {
+  font-size: 54px;
+  font-weight: 100;
+  margin-bottom: 16px;
+}
+
+.landingSubtitle {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.signupWrapper {
+  min-width: 350px;
+  height: 460px;
+  background-color: #fafbfc;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signupInput {
+  margin-bottom: 10px;
+}
+
+.signupInfo {
+  color: #586069 !important;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.signupInfoSmall {
+  color: #6a737d !important;
+  font-size: 14px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.signupButton {
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+
+.logIn__credentials {
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.User {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+  display: flex;
+}
+
+.User__content1 {
+  width: 200px;
+  height: 550px;
+}
+.User__content2 {
+  font-family: 'Roboto', sans-serif;
+  width: 600px;
+   height: 550px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.User__content3 {
+  width: 200px;
+  height: 550px;
+}
+
+.Organization {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+  display: flex;
+}
+
+.Organization__content1 {
+  width: 200px;
+  height: 600px;
+}
+.Organization__content2 {
+  font-family: 'Roboto', sans-serif;
+  width: 600px;
+  height: 600px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.Organization__content3 {
+  width: 200px;
+  height: 600px;
+}
+
+
+.Organization__messages {
+  overflow: auto;
+  height: 408px;
+}
+
+
+/* post */
+
+.postWrapper,
+.postContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.postContent{
+  width: 800px;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.postTitle {
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: 200;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.postTextarea {
+  width: 90%;
+  min-height: 300px;
+  padding: 10px;
+}
+
+.postButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 20px;
+  width: 100%;
+}
+
+
+#postTextarea {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  background-color: #e6e6e6;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+/*Timeline progress bar  */
+
+.tags {
+  color: grey;
+}
+
+.timeline {
+  margin: 10px;
+}
+
+.timeline-list {
+  padding: 20px;
+}
+
+li {
+  width: 4em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 1em;
+  background: dodgerblue;
+  margin: 0 1em;
+  display: inline-block;
+  color: white;
+  position: relative;
+}
+
+li::before{
+  content: '';
+  position: absolute;
+  top: .9em;
+  left: -2em;
+  width: 2em;
+  height: .2em;
+  background: dodgerblue;
+  z-index: 0;
+}
+
+
+
+li:first-child::before {
+  display: none;
+}
+
+.active {
+  background: dodgerblue;
+}
+
+.active ~ li {
+  background: red;
+}
+
+.active ~ li::before {
+  background: lightblue;
+}
+
+.chip {
+  margin: 4px !important;
+}
+.chip-wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }

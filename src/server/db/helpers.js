@@ -28,9 +28,16 @@ const helpers = {
   delete: (targetId, table, cb) => {
     db.query(`DELETE FROM ${table} WHERE id=?`, targetId, (err, res) => {
       if(err) console.log(err);
-      console.log('deleted:', res.affectedRows, 'rows')
+      console.log('deleted:', res.affectedRows, 'rows');
       cb(err, res)
     })
+  },
+
+  query: function(q, id) {
+    let queries = {
+      retrieveUser: `select * from users where users.id = "${id}"`,
+    }
+    return queries[q];
   }
 }
 
@@ -38,5 +45,6 @@ module.exports = {
   create: Promise.promisify(helpers.create),
   retrieve: Promise.promisify(helpers.retrieve),
   update: Promise.promisify(helpers.update),
-  delete: Promise.promisify(helpers.delete)
+  delete: Promise.promisify(helpers.delete),
+  query: helpers.query
 }

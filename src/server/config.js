@@ -28,10 +28,12 @@ db.knex.schema.hasTable('timelines').then((exists) => {
   if (!exists) {
       db.knex.schema.createTable('timelines', (timeline) => {
         timeline.increments('id').primary();
+        timeline.integer('user_id').references('user.is')
         timeline.string('task', 100).notNullable();
         timeline.date('begin_date');
         timeline.date('end_date');
         timeline.string('story', 1000);
+        timeline.boolean('beacon')
       }).then((table) => {
         console.log('Created "timelines" Table', table);
       });
