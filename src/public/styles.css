@@ -1,5 +1,8 @@
 body {
-  background-color: grey;
+  background-color: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logIn__credentials {
@@ -11,4 +14,27 @@ body {
   align-items: center;
   flex-direction: column;
   margin: 20px;
+}
+
+.Organization {
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  height: 600px;
+  width: 600px;
+  margin: 60px;
+}
+
+.Organization__title {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.Oragnization__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
