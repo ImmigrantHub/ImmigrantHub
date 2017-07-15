@@ -71,7 +71,7 @@ const Community = props => {
       <div className="Community__cards" style={{justifyContent: 'spaceAround'}}>
         <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'row', marginTop: 0}}>
           <Card className="Community__content1">
-            <CardTitle title="Your Details" style={{paddingBottom: 0, marginBottom: 0, alignSelf: 'center'}} />
+            <CardTitle title="Your Details" style={{fontWeight: 'bold', paddingBottom: 0, marginBottom: 0, alignSelf: 'center'}} />
             <CardText style={{paddingTop: 0, marginTop: -60, alignSelf: 'center'}}>
                 <List  style={{display: 'flex', flexDirection: 'rowReverse', justifyContent: 'center', paddingLeft: 200, alignItems: 'center'}}>
                   <Divider />
@@ -82,7 +82,7 @@ const Community = props => {
             </CardText>
           </Card>
           <Card className="Community__content3">
-            <CardTitle title="The Community" style={{paddingBottom: 0, marginBottom: 0, alignSelf: 'center'}} />
+            <CardTitle title="The Community" style={{fontWeight: 'bold', paddingBottom: 0, marginBottom: 0, alignSelf: 'center'}} />
             <CardText style={{paddingTop: 0, marginTop: -65, alignSelf: 'center'}}>
               <List  style={{display: 'flex', flexDirection: 'rowReverse', justifyContent: 'center', paddingLeft: 200, alignItems: 'center'}}>
                   <ListItem style={{fontWeight: 'bold'}} primaryText="At The Same Step As You:" secondaryText="10,000 people" />
@@ -95,15 +95,15 @@ const Community = props => {
         <div style={{display: 'flex', flexDirection: 'row', marginBottom: 10, flexGrow: 1}}>
           <div style={{flex: 1}}>
             <BarChart ylabel='Quantity'
-                    width={520}
-                    height={170}
+                    width={565}
+                    height={220}
                     margin={margin}
                     data={data}/>
           </div>
-          <div style={{display: 'flex',flexDirection: 'column', marginTop: -10}}>
+          <div style={{display: 'flex',flexDirection: 'column', marginTop: 7}}>
           <div style={{flex: 1}}>
             <Card>
-              <CardTitle title="Legal Resources" style={{paddingBottom: 0, marginBottom: -20, alignSelf: 'center'}} />
+              <CardTitle title="Legal Resources" style={{paddingBottom: 0, marginBottom: -60, alignSelf: 'center'}} />
               <List style={{display: 'flex', flexDirection: 'row', alignItems: 'flexEnd', paddingLeft: 200, marginTop: -60}}>
                   <ListItem primaryText="Lawyers for Children LLC" secondaryText="(908) 555-4538"/>
                   <Divider />
@@ -113,7 +113,7 @@ const Community = props => {
           </div>
           <div style={{flex: 1}}>
             <Card>
-              <CardTitle title="Health Resources" style={{paddingBottom: 0, marginBottom: -30, alignSelf: 'center'}} />
+              <CardTitle title="Health Resources" style={{paddingBottom: 0, marginBottom: -60, alignSelf: 'center'}} />
               <List style={{display: 'flex', flexDirection: 'row', alignItems: 'flexEnd', paddingLeft: 200, marginTop: -60}}>
                   <ListItem primaryText="South Jersey Health" secondaryText="(716) 555-1290"/>
                   <Divider />
@@ -148,7 +148,6 @@ const Community = props => {
                   <CardActions>
                     <FlatButton primary={true} label='Contact User'/>
                     <FlatButton primary={true} label='Like'/>
-
                   </CardActions>
                 </Card>
               </GridTile>

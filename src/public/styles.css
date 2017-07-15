@@ -251,6 +251,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
+  width: 1118px;
 }
 
 .Community__content1 {
