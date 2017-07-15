@@ -13,8 +13,8 @@ import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 import StarBorder from 'material-ui/svg-icons/toggle/star-border';
 import {GridList, GridTile} from 'material-ui/GridList';
-var Chart = require('react-d3-core').Chart;
-var LineChart = require('react-d3-basic').LineChart;
+// var Chart = require('react-d3-core').Chart;
+// var LineChart = require('react-d3-basic').LineChart;
 
 
 const styles = {
