@@ -135,19 +135,26 @@ body {
 
 .User__content1 {
   width: 240px;
-  height: 600px;
+  height: 750px;
 }
 .User__content2 {
   font-family: 'Roboto', sans-serif;
   width: 600px;
-   height: 600px;
+  height: 750px;
   margin-right: 20px;
   margin-left: 20px;
 }
 
+.User__content2Story {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .User__content3 {
   width: 240px;
-  height: 600px;
+  height: 750px;
 }
 
 /* Organization */
@@ -167,19 +174,19 @@ body {
 
 .Organization__content1 {
   width: 240px;
-  height: 600px;
+  height: 750px;
 }
 .Organization__content2 {
   font-family: 'Roboto', sans-serif;
   width: 600px;
-  height: 600px;
+  height: 750px;
   margin-right: 20px;
   margin-left: 20px;
 }
 
 .Organization__content3 {
   width: 240px;
-  height: 600px;
+  height: 750px;
 }
 
 .Organization__messages {
@@ -421,12 +428,12 @@ li:first-child::before {
 /* graph */
 
 .bar {
-  fill: steelblue;
+  fill: rgba(0, 188, 212, 0.8);
   width: 50;
 }
 
 .bar:hover {
-  fill: brown;
+  fill: #F72222;
 }
 
 .axis {
