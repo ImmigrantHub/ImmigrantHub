@@ -37,7 +37,7 @@ class Signin extends React.Component {
     event.preventDefault();
     console.log('here')
     let user = {
-      username:this.state.username, 
+      username:this.state.username,
       email:this.state.email,
     };
 
@@ -49,7 +49,7 @@ class Signin extends React.Component {
       body: JSON.stringify(user),
     })
     .then(res => {
-      this.state.wantHelp ? this.props.history.push('/user') : this.props.history.push('/organization'); 
+      this.state.wantHelp ? this.props.history.push('/user') : this.props.history.push('/organization');
     })
   }
 
@@ -66,19 +66,27 @@ class Signin extends React.Component {
     return (
       <div className="landingWrapper">
         <div className="landingInfo">
-          <h1 className="landingTitle">Built by Immigrants for Immigrants!</h1>
-          <h2 className="landingSubtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do <b>eiusmod</b> uti <b>tempor incididunt</b> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</h2>
+          <h1 className="landingTitle">Welcome Home!</h1>
+          <h2 className="landingSubtitle">Just as fertile soil is needed for a seed to grow, <b>ImmigrantHub</b> foster an environment that makes it possible for newcomers of all backgrounds to feel valued and to fully participate alongside their neighbors in the social, civic, and economic fabric of their adopted hometowns.</h2>
         </div>
         <Card className="signupCard">
           <form onSubmit={this.handleUserLogin} className="signupWrapper">
-            <span className="signupInfo">Username</span>
-            <TextField name="username" className="signupInput" onChange={this.handleInputChange} />
-            <span className="signupInfo">Email</span>
-            <TextField name="email" className="signupInput" type="email" onChange={this.handleInputChange} />
-            <span className="signupInfo">Password</span>
-            <TextField className="signupInput" type="password"/>
-            <span className="signupInfo signupInfoSmall">Use at least one letter, one numeral, and seven characters.</span>
-
+            <div style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                flexDirection: 'column',
+                alignItems: 'center',
+                minHeight: '275px',
+                minWidth: '250px'
+              }}>
+              {/* <span className="signupInfo">Username</span> */}
+              <TextField hintText="username" name="username" className="signupInput" onChange={this.handleInputChange} />
+              {/* <span className="signupInfo">Email</span> */}
+              <TextField hintText="email" name="email" className="signupInput" type="email" onChange={this.handleInputChange} />
+              {/* <span className="signupInfo">Password</span> */}
+              <TextField hintText="password" className="signupInput" type="password"/>
+              <span className="signupInfo signupInfoSmall">Use at least one letter, one numeral, and seven characters.</span>
+            </div>
             <div style={{
               display: 'flex',
               justifyContent: 'space-around',
@@ -91,7 +99,7 @@ class Signin extends React.Component {
 
             <RaisedButton type="submit" className="signupButton" label="Signup for ImmigrantHub" />
           </form>
-        
+
           <div className="signupInfo signupInfoSmall"><a href="/#/login">I already have an account!</a></div>
         </Card>
       </div>
