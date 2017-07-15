@@ -1,8 +1,85 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   background-color: #e6e6e6;
   display: flex;
   justify-content: center;
   align-items: center;
+  /*background-image: url('http://www.reapontario.ca/wp-content/uploads/2014/12/bigstock-Multi-ethnic-Group-Of-Students-4413098.jpg');*/
+  /*background-image: url('http://s1.r29static.com//bin/entry/b60/x,80/1770692/image.jpg');*/
+  /*background-image: url('https://znet.ng/wp-content/uploads/2017/01/world-tech-ceos-vs-trump-1-640x426.jpg');*/
+  /*background-image: url('https://fthmb.tqn.com/spaZKVnogQzg2AxDK-CDwOa6VMM=/1500x1000/filters:no_upscale():fill(FFCC00,1)/about/DonaldTrumpFunnyFace-58b1bd865f9b5860460f82ed.jpg');*/
+  background-size: cover;
+}
+
+.menu {
+  width: 1120px !important;
+}
+
+.landingWrapper {
+  max-width: 850px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 460px;
+}
+
+.landingInfo {
+  font-family: 'Roboto', sans-serif;
+  height: 460px;
+  padding: 24px;
+}
+
+.landingTitle {
+  font-size: 54px;
+  font-weight: 100;
+  margin-bottom: 16px;
+}
+
+.landingSubtitle {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.signupWrapper {
+  min-width: 350px;
+  min-height: 460px;
+  background-color: #fafbfc;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signupInput {
+  margin-bottom: 10px;
+}
+
+.signupInfo {
+  color: #586069 !important;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.signupInfoSmall {
+  color: #6a737d !important;
+  font-size: 14px;
+  text-align: center;
+}
+
+.signupButton {
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 .logIn__credentials {
@@ -16,25 +93,254 @@ body {
   margin: 20px;
 }
 
-.Organization {
-  font-family: 'Roboto', sans-serif;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: space-between;
-  height: 600px;
-  width: 600px;
-  margin: 60px;
-}
+/* User */
 
-.Organization__title {
-  font-size: 40px;
-  font-weight: 900;
-}
-
-.Oragnization__content {
+.User {
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+}
+
+.User__cards {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+}
+
+.User__content1 {
+  width: 240px;
+  height: 600px;
+}
+.User__content2 {
+  font-family: 'Roboto', sans-serif;
+  width: 600px;
+   height: 600px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.User__content3 {
+  width: 240px;
+  height: 600px;
+}
+
+/* Organization */
+
+.Organization {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Organization__cards {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+}
+
+.Organization__content1 {
+  width: 240px;
+  height: 600px;
+}
+.Organization__content2 {
+  font-family: 'Roboto', sans-serif;
+  width: 600px;
+  height: 600px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.Organization__content3 {
+  width: 240px;
+  height: 600px;
+}
+
+.Organization__messages {
+  overflow: auto;
+  height: 408px;
+}
+
+.Organization__radarTitle {
+  font-size: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(0, 188, 212, 1);
+  color: white;
+}
+
+.Organization__communitiesTitle {
+  font-size: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(0, 188, 212, 1);
+  color: white;
+}
+
+.Organization__radarTitle i, .Organization__communitiesTitle i {
+  margin-right: 10px;
+}
+
+.Organization__radar {
+  overflow: auto;
+  height: 546px;
+}
+
+/* post */
+
+.postWrapper,
+.postContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.postContent{
+  width: 800px;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.postTitle {
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: 200;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.postTextarea {
+  width: 90%;
+  min-height: 300px;
+  padding: 10px;
+}
+
+.postButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 20px;
+  width: 100%;
+}
+
+
+#postTextarea {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  background-color: #e6e6e6;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+/*Timeline progress bar  */
+
+.tags {
+  color: grey;
+}
+
+.timeline {
+  margin: 10px;
+}
+
+.timeline-list {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  width: 4em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 1em;
+  background: rgba(0, 188, 212, 1);
+  margin: 0 1em;
+  display: inline-block;
+  color: white;
+  position: relative;
+}
+
+li::before{
+  content: '';
+  position: absolute;
+  top: .9em;
+  left: -2em;
+  width: 2em;
+  height: .2em;
+  background: rgba(0, 188, 212, 0.6);
+  z-index: 0;
+}
+
+li:first-child::before {
+  display: none;
+}
+
+/*.active {
+  background: dodgerblue;
+}
+
+.active ~ li {
+  background: #F72222;
+}
+
+.active ~ li::before {
+  background: lightblue;
+}*/
+
+.active {
+  background-color: red;
+}
+
+.timeline-node {
+  background-color: dodgerblue;
+}
+
+.chip {
+  margin: 4px !important;
+}
+.chip-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
 }
