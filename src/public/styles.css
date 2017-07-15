@@ -8,12 +8,13 @@ body {
   background-color: #e6e6e6;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   /*background-image: url('http://www.reapontario.ca/wp-content/uploads/2014/12/bigstock-Multi-ethnic-Group-Of-Students-4413098.jpg');*/
   /*background-image: url('http://s1.r29static.com//bin/entry/b60/x,80/1770692/image.jpg');*/
   /*background-image: url('https://znet.ng/wp-content/uploads/2017/01/world-tech-ceos-vs-trump-1-640x426.jpg');*/
   /*background-image: url('https://fthmb.tqn.com/spaZKVnogQzg2AxDK-CDwOa6VMM=/1500x1000/filters:no_upscale():fill(FFCC00,1)/about/DonaldTrumpFunnyFace-58b1bd865f9b5860460f82ed.jpg');*/
   background-size: cover;
+  margin-top: 20px;
 }
 
 .menu {
@@ -162,6 +163,47 @@ body {
 }
 
 .Organization__messages {
+  overflow: auto;
+  height: 408px;
+}
+
+/* Community */
+
+.Community {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Community__cards {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.Community__content1 {
+  flex: 1;
+  height: 80px;
+  margin-bottom: 20px;
+  margin-right: 5px;
+}
+.Community__content2 {
+  font-family: 'Roboto', sans-serif;
+  /*width: 1000px;
+  height: 600px;*/
+  /*margin-right: 40px;
+  margin-left: 40px;*/
+}
+
+.Community__content3 {
+  flex: 1;
+  height: 80px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+.Community__messages {
   overflow: auto;
   height: 408px;
 }

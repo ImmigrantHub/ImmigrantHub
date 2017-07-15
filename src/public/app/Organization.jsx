@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import MenuBar from './MenuBar.jsx';
 
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
@@ -13,11 +12,6 @@ import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 
-=======
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
-import Toggle from 'material-ui/Toggle';
->>>>>>> Organization
 
 const Organization = props => {
 
@@ -41,7 +35,6 @@ const Organization = props => {
 
   return (
     <div className="Organization">
-<<<<<<< HEAD
 
       <MenuBar />
 
@@ -159,10 +152,6 @@ const Organization = props => {
           </CardText>
         </Card>
       </div>
-=======
-      <div className="Organization__title">Organization</div>
-      <User />
->>>>>>> Organization
     </div>
   )
 };
