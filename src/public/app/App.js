@@ -14,6 +14,7 @@ import Signin from './Signin.jsx';
 import Organization from './Organization.jsx';
 import User from './User.jsx';
 import Post from './Post.jsx';
+import MenuBar from './MenuBar.jsx';
 
 class App extends React.Component {
   render() {
@@ -35,6 +36,9 @@ class App extends React.Component {
             )}/>
             <Route exact path="/post" render={() => (
               <Post/>
+            )}/>
+            <Route exact path="/menu" render={() => (
+              <MenuBar/>
             )}/>
           </div>
         </Router>
