@@ -123,42 +123,37 @@ const Community = props => {
           </div>
         </div>
       </div>
-
-
-      <Card className="Community__content2" style={{marginBottom: 20, marginTop: -10}}>
-         <CardTitle title="Community Stories" style={{fontWeight: 'bold', marginBottom: -10}} />
-      </Card>
-        <div style={styles.root}>
-          <GridList
-            padding={20}
-            cols={3}
-            cellHeight={'auto'}
-          >
-          {tilesData.map((tile) => (
-            <GridTile>
-              <Card>
-                <CardHeader
-                  title={tile.title}
-                  titleStyle={{ size: 50 }}
-                  subtitle={tile.author}
-                  />
-                <CardText>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-                  Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-                  Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
-                </CardText>
-                <CardActions>
-                  <FlatButton primary={true} label='Contact User'/>
-                  <FlatButton primary={true} label='Like'/>
-                </CardActions>
-              </Card>
-            </GridTile>
-          ))}
-        </GridList>
-      </div>
-
-
+        <Card className="Community__content2" style={{marginBottom: 20, marginTop: -10}}>
+           <CardTitle title="Community Stories" style={{fontWeight: 'bold', marginBottom: -20}}/>
+        </Card>
+          <div style={styles.root}>
+            <GridList
+              padding={20}
+              cols={3}
+              cellHeight={'auto'}
+            >
+            {tilesData.map((tile) => (
+              <GridTile>
+                <Card>
+                  <CardHeader
+                    title={tile.title} 
+                    subtitle={tile.author}
+                    />
+                  <CardText>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
+                    Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
+                    Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+                  </CardText>
+                  <CardActions>
+                    <FlatButton primary={true} label='Contact User'/>
+                    <FlatButton primary={true} label='Like'/>
+                  </CardActions>
+                </Card>
+              </GridTile>
+            ))}
+          </GridList>
+        </div>
       </div>
     </div>
   )
