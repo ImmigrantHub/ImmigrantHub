@@ -11,6 +11,7 @@ import IconButton from 'material-ui/IconButton';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
+import TextField from 'material-ui/TextField';
 
 
 const Organization = props => {
@@ -45,15 +46,35 @@ const Organization = props => {
             <span>Communities</span>
           </div>
           <CardText>
-              <List>
-                <ListItem primaryText="New York" />
-                <Divider />
-                <ListItem primaryText="Chicago" />
-                <Divider />
-                <ListItem primaryText="Detroit" />
-                <Divider />
-                <ListItem primaryText="Seattle" />
-              </List>
+            <TextField
+              hintText="Search"
+              style={{ width: 206 , marginBottom: 20 }}
+            />
+            <List>
+              <ListItem
+                primaryText="New York"
+                rightAvatar={<Avatar src="https://media.timeout.com/images/101705313/image.jpg" />}
+                style={{ marginBottom: 10, marginTop: -10  }}
+              />
+              <Divider />
+              <ListItem
+                primaryText="Chicago"
+                rightAvatar={<Avatar src="http://www.aviewoncities.com/img/chicago/kveus3940s.jpg" />}
+                style={{ marginBottom: 10, marginTop: 10 }}
+              />
+              <Divider />
+              <ListItem
+                primaryText="Detroit"
+                rightAvatar={<Avatar src="http://agbuyp.org/wp-content/uploads/2016/08/detroit1.jpg" />}
+                style={{ marginBottom: 10, marginTop: 10 }}
+              />
+              <Divider />
+              <ListItem
+                primaryText="Seattle"
+                rightAvatar={<Avatar src="http://www.sustainableseattle.org/wp-content/uploads/2015/08/SeattleMunicipleArchive-e1488676312333.jpg" />}
+                style={{ marginBottom: 10, marginTop: 10 }}
+              />
+            </List>
           </CardText>
         </Card>
         <Card className="Organization__content2">
