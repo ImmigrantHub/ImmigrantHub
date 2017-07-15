@@ -82,7 +82,6 @@ body {
   margin-bottom: 10px;
 }
 
-
 .logIn__credentials {
   background-color: white;
   width: 200px;
@@ -94,35 +93,51 @@ body {
   margin: 20px;
 }
 
+/* User */
+
 .User {
   width: 100%;
   height: 100%;
-  margin-top: 50px;
   display: flex;
+  flex-direction: column;
+}
+
+.User__cards {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
 }
 
 .User__content1 {
   width: 200px;
-  height: 550px;
+  height: 600px;
 }
 .User__content2 {
   font-family: 'Roboto', sans-serif;
   width: 600px;
-   height: 550px;
+   height: 600px;
   margin-right: 40px;
   margin-left: 40px;
 }
 
 .User__content3 {
   width: 200px;
-  height: 550px;
+  height: 600px;
 }
+
+/* Organization */
 
 .Organization {
   width: 100%;
   height: 100%;
-  margin-top: 50px;
   display: flex;
+  flex-direction: column;
+}
+
+.Organization__cards {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
 }
 
 .Organization__content1 {
@@ -141,7 +156,6 @@ body {
   width: 200px;
   height: 600px;
 }
-
 
 .Organization__messages {
   overflow: auto;
