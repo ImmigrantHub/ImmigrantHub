@@ -1,5 +1,4 @@
 import React from 'react';
-import MenuBar from './MenuBar.jsx';
 
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import Divider from 'material-ui/Divider';
@@ -90,7 +89,6 @@ class User extends React.Component {
 
     return (
       <div className="User">
-        <MenuBar />
         <div className="User__cards">
           <Card className="User__content1">
             <CardHeader
