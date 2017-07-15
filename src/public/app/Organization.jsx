@@ -40,18 +40,19 @@ const Organization = props => {
 
       <div className="Organization__cards">
         <Card className="Organization__content1">
-          <CardHeader
-            title="Notifications"
-          />
+          <div className='Organization__communitiesTitle'>
+            <i className="material-icons">face </i>
+            <span>Communities</span>
+          </div>
           <CardText>
               <List>
-                <ListItem primaryText="Help!" />
+                <ListItem primaryText="New York" />
                 <Divider />
-                <ListItem primaryText="Help!" />
+                <ListItem primaryText="Chicago" />
                 <Divider />
-                <ListItem primaryText="Help!" />
+                <ListItem primaryText="Detroit" />
                 <Divider />
-                <ListItem primaryText="Help!" />
+                <ListItem primaryText="Seattle" />
               </List>
           </CardText>
         </Card>
@@ -136,20 +137,31 @@ const Organization = props => {
            </CardText>
         </Card>
         <Card className="Organization__content3">
-          <CardHeader
-            title="Communities"
-          />
-          <CardText>
+          <div className='Organization__radarTitle'>
+            <i className="material-icons">track_changes</i>
+            <span>Radar</span>
+          </div>
+          <div className='Organization__radar'>
+            <CardText>
               <List>
-                <ListItem primaryText="Hello!" />
+                <Subheader>Today</Subheader>
+                <ListItem insetChildren={true} primaryText="Hello!" />
+                <ListItem insetChildren={true} primaryText="Wassup!" />
+                <ListItem insetChildren={true} primaryText="Hey!" />
                 <Divider />
-                <ListItem primaryText="Wassup!" />
+                <Subheader>Today</Subheader>
+                <ListItem insetChildren={true} primaryText="Hello!" />
+                <ListItem insetChildren={true} primaryText="Wassup!" />
+                <ListItem insetChildren={true} primaryText="Hey!" />
                 <Divider />
-                <ListItem primaryText="Hey!" />
+                <Subheader>Today</Subheader>
+                <ListItem insetChildren={true} primaryText="Hello!" />
+                <ListItem insetChildren={true} primaryText="Wassup!" />
+                <ListItem insetChildren={true} primaryText="Hey!" />
                 <Divider />
-                <ListItem primaryText="Sup?" />
               </List>
-          </CardText>
+            </CardText>
+          </div>
         </Card>
       </div>
     </div>

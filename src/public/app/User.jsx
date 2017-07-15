@@ -36,7 +36,6 @@ const User = props => {
              subtitle="Mexico City"
              avatar="https://avatars7.githubusercontent.com/u/8907103?v=4&s=460"
            />
-           <CardTitle title="Story" subtitle="Track your progress" />
           <Paper zDepth={2} rounded={false} className="timeline" >
               <ul className="timeline-list">
                 <li className="timeline-node">Step 1</li>
@@ -53,7 +52,7 @@ const User = props => {
               <Chip className="chip" key={1}> Latin America </Chip>
               <Chip className="chip" key={2}>DOCA</Chip>
              </div>
-             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
              Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
              Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
              Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.

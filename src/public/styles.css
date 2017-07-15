@@ -16,7 +16,7 @@ body {
 }
 
 .menu {
-  width: 1080px !important;
+  width: 1120px !important;
 }
 
 .landingWrapper {
@@ -109,19 +109,19 @@ body {
 }
 
 .User__content1 {
-  width: 200px;
+  width: 240px;
   height: 600px;
 }
 .User__content2 {
   font-family: 'Roboto', sans-serif;
   width: 600px;
    height: 600px;
-  margin-right: 40px;
-  margin-left: 40px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .User__content3 {
-  width: 200px;
+  width: 240px;
   height: 600px;
 }
 
@@ -141,19 +141,19 @@ body {
 }
 
 .Organization__content1 {
-  width: 200px;
+  width: 240px;
   height: 600px;
 }
 .Organization__content2 {
   font-family: 'Roboto', sans-serif;
   width: 600px;
   height: 600px;
-  margin-right: 40px;
-  margin-left: 40px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .Organization__content3 {
-  width: 200px;
+  width: 240px;
   height: 600px;
 }
 
@@ -162,6 +162,38 @@ body {
   height: 408px;
 }
 
+.Organization__radarTitle {
+  font-size: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(0, 188, 212, 1);
+  color: white;
+}
+
+.Organization__communitiesTitle {
+  font-size: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(0, 188, 212, 1);
+  color: white;
+}
+
+.Organization__radarTitle i, .Organization__communitiesTitle i {
+  margin-right: 10px;
+}
+
+.Organization__radar {
+  overflow: auto;
+  height: 546px;
+}
 
 /* post */
 
@@ -228,6 +260,8 @@ body {
 
 .timeline-list {
   padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 li {
@@ -236,7 +270,7 @@ li {
   text-align: center;
   line-height: 2em;
   border-radius: 1em;
-  background: dodgerblue;
+  background: rgba(0, 188, 212, 1);
   margin: 0 1em;
   display: inline-block;
   color: white;
@@ -250,26 +284,24 @@ li::before{
   left: -2em;
   width: 2em;
   height: .2em;
-  background: dodgerblue;
+  background: rgba(0, 188, 212, 0.6);
   z-index: 0;
 }
-
-
 
 li:first-child::before {
   display: none;
 }
 
 .active {
-  background: dodgerblue;
+  background: rgba(0, 188, 212, 0.5);
 }
 
 .active ~ li {
-  background: red;
+  background: #F72222;
 }
 
 .active ~ li::before {
-  background: lightblue;
+  background: rgba(0, 188, 212, 0.3);
 }
 
 .chip {
@@ -278,4 +310,29 @@ li:first-child::before {
 .chip-wrapper {
   display: flex;
   flex-wrap: wrap;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
 }
