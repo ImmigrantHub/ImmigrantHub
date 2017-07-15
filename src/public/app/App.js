@@ -16,6 +16,7 @@ import Organization from './Organization.jsx';
 import User from './User.jsx';
 import Post from './Post.jsx';
 import MenuBar from './MenuBar.jsx';
+import Community from './Community.jsx';
 
 class App extends React.Component {
   render() {
@@ -40,6 +41,9 @@ class App extends React.Component {
             )}/>
             <Route exact path="/menu" render={() => (
               <MenuBar/>
+            )}/>
+            <Route exact path="/community" render={() => (
+              <Community/>
             )}/>
           </div>
         </Router>

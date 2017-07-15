@@ -1,6 +1,7 @@
 import React from 'react';
+import FlatButton from 'material-ui/FlatButton';
+import Toggle from 'material-ui/Toggle';
 import MenuBar from './MenuBar.jsx';
-
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import Divider from 'material-ui/Divider';
 import {List, ListItem} from 'material-ui/List';
@@ -12,7 +13,6 @@ import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 import TextField from 'material-ui/TextField';
-
 
 const Organization = props => {
 
@@ -36,6 +36,7 @@ const Organization = props => {
 
   return (
     <div className="Organization">
+
 
       <MenuBar />
 
