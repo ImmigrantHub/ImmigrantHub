@@ -1,7 +1,7 @@
 # ImmigrantHub
 LiveJournal for immigrants. Let others benefit from you story, and get connected to those who will advocate for you during the process.
 2017 "I Stand With Immigrants" Hackathon project
-***
+
 ## Vision:
 * Foster community: 
   1. Users track their process timeline and share their stories at each step of the way.
