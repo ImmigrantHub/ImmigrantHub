@@ -12,6 +12,7 @@ import TagArray from './TagArray.jsx';
 import RaisedButton from 'material-ui/RaisedButton';
 import Dialog from 'material-ui/Dialog';
 import Post from './Post.jsx';
+import jquery from 'jquery';
 
 class User extends React.Component {
   constructor() {
@@ -22,17 +23,17 @@ class User extends React.Component {
         {
           title: 'Step 1',
           tags: ['HB1, Visa, Mastercard'],
-          content: 'Waryfish flathead catfish, Atlantic silverside, warmouth Sacramento blackfish coley; yellowfin cutthroat trout yellowfin cutthroat trout. Rohu Siamese fighting fish vendace: Cherubfish peladillo, wahoo ladyfish betta daggertooth pike conger squeaker whiff, white croaker. Denticle herring freshwater eel, louvar Japanese eel southern sandfish sweeper dottyback coffinfish. Eel-goby sand lance slickhead'
+          content: '<div>Waryfish flathead catfish, Atlantic silverside, warmouth Sacramento blackfish coley; yellowfin cutthroat trout yellowfin cutthroat trout. Rohu Siamese fighting fish vendace: Cherubfish peladillo, wahoo ladyfish betta daggertooth pike conger squeaker whiff, white croaker. Denticle herring freshwater eel, louvar Japanese eel southern sandfish sweeper dottyback coffinfish. Eel-goby sand lance slickhead</div>'
         },
         {
           title: 'Step 2',
           tags: ['Greencard, Indian, Software Engineer'],
-          content: 'Tulip glass Saccharification, Yeast Bottom-fermenting Yeast krug. Grainy Conditioning Tank Grainy Ale Crystal malt Balthazar. Bright beer Autolysis Centrifugation Dextrin Estery. Trappist Lagering Pilsner, Steam Beer Microbrewery Carboy! Cask Conditioned Ale Bottom-fermenting Yeast Sweet Decoction Bunghole Pub glass Anaerobic Brewhouse!'
+          content: '<div>Tulip glass Saccharification, Yeast Bottom-fermenting Yeast krug. Grainy Conditioning Tank Grainy Ale Crystal malt Balthazar. Bright beer Autolysis Centrifugation Dextrin Estery. Trappist Lagering Pilsner, Steam Beer Microbrewery Carboy! Cask Conditioned Ale Bottom-fermenting Yeast Sweet Decoction Bunghole Pub glass Anaerobic Brewhouse!</div>'
         },
         {
           title: 'Step 3',
           tags: ['Marriage, Naturalization, Trump'],
-          content: 'Johnny walker red galliano. The blenheim pisco sour speyburn nog-a-sake–tormore, polish martini stinger. Lochnagar remy martin lime rickey bull shot salty dog heart of fire chupacabra, brandy alexander old grand dad. Craigellachie, “singapore sling jack daniel’s tom and jerry batida mickey slim courvoisier blue hawaii; montgomery man o’war royal arrival colombia,” one-balled dictator'
+          content: '<div>Johnny walker red galliano. The blenheim pisco sour speyburn nog-a-sake–tormore, polish martini stinger. Lochnagar remy martin lime rickey bull shot salty dog heart of fire chupacabra, brandy alexander old grand dad. Craigellachie, “singapore sling jack daniel’s tom and jerry batida mickey slim courvoisier blue hawaii; montgomery man o’war royal arrival colombia,” one-balled dictator</div>'
         },
       ],
       openStep: false,
@@ -62,11 +63,30 @@ class User extends React.Component {
     //
     // olds.push(new);
 
-    this.setState({ openStep: false });
+    const $newTitle = document.getElementById('postTitle');
+    const $newTags = document.getElementById('postTags');
+    const $newContent = document.getElementById('postTextarea');
+
+    const newTitle = $newTitle.innerHTML;
+    const newTags = $newTags.innerHTML;
+    const newContent = `<div>${$newContent.innerHTML}</div>`;
+    const steps = this.state.steps;
+    steps.push({
+      title: newTitle,
+      tags: JSON.parse(newTags),
+      content: newContent
+    })
+
+    this.setState({ openStep: false, steps });
   }
 
   handleStepClick(s) {
     //console.log(s)
+
+    // $content = document.getElementById('content');
+
+    // $content.innerHTML = s.content;
+
     this.setState({ currentStep: s }, () => {
       this.forceUpdate();
     });
@@ -142,7 +162,9 @@ class User extends React.Component {
                   tags={this.state.currentStep.tags}
                 />
                </div>
-               {this.state.currentStep.content}
+
+               <div dangerouslySetInnerHTML={{ __html: this.state.currentStep.content}} />
+
              </CardText>
              <Divider/>
              <CardActions>
