@@ -36,6 +36,8 @@ const Organization = props => {
   return (
     <div className="Organization">
 
+    <div className="bg"></div>
+
       <div className="Organization__cards">
         <Card className="Organization__content1">
           <div className='Organization__communitiesTitle'>

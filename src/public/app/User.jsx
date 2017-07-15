@@ -109,7 +109,12 @@ class User extends React.Component {
     ];
 
     return (
+
+
       <div className="User">
+
+      <div className="bg"></div>
+
         <div className="User__cards">
           <Card className="User__content1">
             <div className='Organization__communitiesTitle'>

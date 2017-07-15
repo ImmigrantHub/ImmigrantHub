@@ -65,6 +65,8 @@ const Community = props => {
   return (
     <div className="Community">
 
+    <div className="bg"></div>
+
       <div className="Community__cards" style={{justifyContent: 'spaceAround'}}>
         <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'row', marginTop: 0}}>
           <Card className="Community__content1">
