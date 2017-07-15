@@ -13,8 +13,19 @@ import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 import StarBorder from 'material-ui/svg-icons/toggle/star-border';
 import {GridList, GridTile} from 'material-ui/GridList';
-var Chart = require('react-d3-core').Chart;
-var LineChart = require('react-d3-basic').LineChart;
+import BarChart from 'react-bar-chart';
+
+
+const margin = {top: 20, right: 20, bottom: 20, left: 60};
+const data = [
+  {text: 'Bangladesh', value: 179434},
+  {text: 'DR', value: 198993},
+  {text: 'China', value: 221665},
+  {text: 'Vietnam', value: 265496},
+  {text: 'India', value: 299121},
+  {text: 'Philippines', value: 362233},
+  {text: 'Mexico', value: 1308000},
+];
 
 
 const styles = {
@@ -32,29 +43,6 @@ const styles = {
 };
 
 const tilesData = require('./../samplestoriesdata.js');
-
-
-var chartData = require('./../samplegraphdata.js');
-console.log('chartdata',chartData);
-  var width = 700,
-    height = 300,
-    margins = {left: 100, right: 100, top: 50, bottom: 50},
-    title = "User sample",
-    // chart series,
-    // field: is what field your data want to be selected
-    // name: the name of the field that display in legend
-    // color: what color is the line
-    chartSeries = [
-      {
-        field: 'BMI',
-        name: 'BMI',
-        color: '#ff7f0e'
-      }
-    ],
-    // your x accessor
-    x = function(d) {
-      return d.index;
-    }
 
 const Community = props => {
 
@@ -82,7 +70,7 @@ const Community = props => {
       <MenuBar style={{flex: 1, alignSelf: 'stretch'}} />
 
       <div className="Community__cards" style={{justifyContent: 'spaceAround'}}>
-        <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'row', marginTop: 40}}>
+        <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'row', marginTop: 0}}>
           <Card className="Community__content1">
             <CardTitle title="Your Details" style={{paddingBottom: 0, marginBottom: 0, alignSelf: 'center'}} />
             <CardText style={{paddingTop: 0, marginTop: -60, alignSelf: 'center'}}>
@@ -105,30 +93,34 @@ const Community = props => {
             </CardText>
           </Card>
         </div>
-        {/* <div> */}
-          <Card>
-            <Chart
-              title={title}
-              width={width}
-              height={height}
-              margins= {margins}
-            >
-              <LineChart
-                showXGrid= {false}
-                showYGrid= {false}
-                margins= {margins}
-                title={title}
-                data={chartData}
-                width={width}
-                height={height}
-                chartSeries={chartSeries}
-                x={x}
-              />
-            </Chart>
-          </Card>
-        {/* </div> */}
-        <Card className="Community__content2">
-           <CardTitle title="Community Stories" style={{fontWeight: 'bold'}}/>
+        <div style={{display: 'flex', flexDirection: 'row', marginBottom: 10}}>
+          <div style={{flex: 1}}>
+            <BarChart ylabel='Quantity'
+                    width={500}
+                    height={200}
+                    margin={margin}
+                    data={data}/>
+          </div>
+          <div style={{display: 'flex', flex: 1, flexDirection: 'column'}}>
+          <div style={{flex: 1, marginRight: 10}}>
+            <Card>
+              <CardTitle title="Legal Resources" style={{fontWeight: 'bold', paddingBottom: 0, marginBottom: -20, alignSelf: 'center'}} />
+              <List style={{display: 'flex', flexDirection: 'row', alignItems: 'flexEnd', paddingLeft: 200, marginTop: -60}}>
+                  <ListItem primaryText="Lawyers for Children LLC" secondaryText="(908)555-4538"/>
+                  <Divider />
+                  <ListItem primaryText="NY Immigration Attorney" secondaryText="(917)555-0342" />
+                </List>
+            </Card>
+          </div>
+          <div style={{flex: 1}}>
+            <Card>
+              <CardTitle title="Health Resources" style={{paddingBottom: 0, marginBottom: 0, alignSelf: 'center'}} />
+            </Card>
+          </div>
+        </div>
+      </div>
+        <Card className="Community__content2" style={{marginBottom: 20}}>
+           <CardTitle title="Community Stories" style={{fontWeight: 'bold', marginBottom: -20}}/>
              <div style={styles.root}>
                <GridList
                  cellHeight={180}
