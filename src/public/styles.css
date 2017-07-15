@@ -13,6 +13,11 @@ body {
   /*background-image: url('http://s1.r29static.com//bin/entry/b60/x,80/1770692/image.jpg');*/
   /*background-image: url('https://znet.ng/wp-content/uploads/2017/01/world-tech-ceos-vs-trump-1-640x426.jpg');*/
   /*background-image: url('https://fthmb.tqn.com/spaZKVnogQzg2AxDK-CDwOa6VMM=/1500x1000/filters:no_upscale():fill(FFCC00,1)/about/DonaldTrumpFunnyFace-58b1bd865f9b5860460f82ed.jpg');*/
+  background-image: url('https://i.imgur.com/lo5ngKn.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -69,17 +74,18 @@ body {
 
 .signupInfoSmall {
   color: #6a737d !important;
-  font-size: 14px;
+  font-size: 15px;
   text-align: center;
+
 }
 
 .signupButton {
   padding: 10px;
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  /*margin-bottom: 10px;*/
 }
 
 .logIn__credentials {
