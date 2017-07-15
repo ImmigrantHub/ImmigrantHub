@@ -3,6 +3,7 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'mat
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import TagArray from './TagArray.jsx';
+import MenuBar from './MenuBar.jsx';
 
 const languages = [
   'Español',
@@ -19,6 +20,7 @@ const languages = [
 const Signin = props => {
   return (
     <div className="landingWrapper">
+      <MenuBar />
       <div className="landingInfo">
         <h1 className="landingTitle">Welcome Home!</h1>
         <h2 className="landingSubtitle">Just as fertile soil is needed for a seed to grow, <b>ImmigrantHub</b> foster an environment that makes it possible for newcomers of all backgrounds to feel valued and to fully participate alongside their neighbors in the social, civic, and economic fabric of their adopted hometowns.</h2>

@@ -29,9 +29,21 @@ const TagArray = (props) => {
     );
   }
 
+  function parseTags() {
+    //console.log(props.tags, typeof props.tags)
+    var tags;
+    if (typeof props.tags === 'string') {
+      tags = props.tags.split(',');
+    } else {
+      tags = props.tags;
+    }
+
+    return tags.map(renderChip);
+  }
+
   return (
     <div style={ styles.wrapper }>
-      { props.tags.map(renderChip) }
+      { parseTags() }
     </div>
   );
 };

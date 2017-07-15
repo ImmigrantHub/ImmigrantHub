@@ -17,7 +17,10 @@ body {
 }
 
 .menu {
-  width: 1080px !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  /*width: 1080px !important;*/
 }
 
 .landingWrapper {
@@ -261,7 +264,7 @@ li:first-child::before {
   display: none;
 }
 
-.active {
+/*.active {
   background: dodgerblue;
 }
 
@@ -271,6 +274,14 @@ li:first-child::before {
 
 .active ~ li::before {
   background: lightblue;
+}*/
+
+.active {
+  background-color: red;
+}
+
+.timeline-node {
+  background-color: dodgerblue;
 }
 
 .chip {

@@ -2,10 +2,13 @@ import React from 'react';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import MenuBar from './MenuBar.jsx';
+
 
 const Login = props => {
   return (
     <div className="landingWrapper">
+      <MenuBar />
       <Card className="signupCard">
         <div className="signupWrapper">
           <span className="signupInfo">Username</span>

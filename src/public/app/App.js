@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+// import MenuBar from './MenuBar.jsx';
 import {
   HashRouter as Router,
   Route,
