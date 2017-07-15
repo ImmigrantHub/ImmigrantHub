@@ -307,6 +307,7 @@ body {
 }
 
 .timeline-list {
+  display: flex;
   padding: 20px;
   display: flex;
   justify-content: center;

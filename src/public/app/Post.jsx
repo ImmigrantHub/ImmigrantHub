@@ -15,7 +15,7 @@ class Post extends React.Component {
       openTagDialog: false,
       openImageDialog: false,
       // initial examples
-      tags: ['HB1', 'Greencard', 'India'],
+      tags: [],
     };
 
     // tags
@@ -27,6 +27,11 @@ class Post extends React.Component {
     this.handleImageDialogOpen = this.handleImageDialogOpen.bind(this);
     this.handleImageDialogClose = this.handleImageDialogClose.bind(this);
     this.handleImageDialogSubmit = this.handleImageDialogSubmit.bind(this);
+
+    // title
+    this.handleTitleDialogOpen = this.handleTitleDialogOpen.bind(this);
+    this.handleTitleDialogClose = this.handleTitleDialogClose.bind(this);
+    this.handleTitleDialogSubmit = this.handleTitleDialogSubmit.bind(this);
   }
 
   // tags
@@ -46,6 +51,31 @@ class Post extends React.Component {
     oldTags.push(newTag);
 
     this.setState({ openTagDialog: false, tags:  oldTags});
+  }
+
+  // title
+  handleTitleDialogOpen () {
+    this.setState({openTitleDialog: true});
+  };
+
+  handleTitleDialogClose() {
+    this.setState({openTitleDialog: false});
+  };
+
+  handleTitleDialogSubmit() {
+    // const $textarea = document.getElementById('postTextarea');
+    // const $newTitle = document.getElementById('newTitle');
+    // const newTitle = $newTitle.value;
+    // const oldContent = $textarea.innerHTML;
+    //
+    // $textarea.innerHTML = `${oldContent} \n<img src="${newTitle}"/>`;
+    const $textarea = document.getElementById('postTitle');
+    const $newTitle = document.getElementById('newTitle');
+
+    const newTitle = $newTitle.value;
+    $textarea.innerHTML = newTitle;
+
+    this.setState({ openTitleDialog: false });
   }
 
   // photos
@@ -97,14 +127,29 @@ class Post extends React.Component {
       />,
     ];
 
+    const actionsTitle = [
+      <FlatButton
+        label="Cancel"
+        primary={true}
+        onClick={this.handleTitleDialogClose}
+      />,
+      <FlatButton
+        label="Submit"
+        primary={true}
+        keyboardFocused={true}
+        onClick={this.handleTitleDialogSubmit}
+      />,
+    ];
+
     return (
       <div className="postWrapper">
         <Card className="postCard">
           <div className="postContent">
-            <span className="postTitle">Your post</span>
+            <span id="postTitle">Your post</span>
             <TagArray
               tags={this.state.tags}
             />
+            <span id="postTags" style={{ display: 'none' }}>{JSON.stringify(this.state.tags)}</span>
             <div
               id="postTextarea"
               contentEditable="true"
@@ -144,7 +189,19 @@ class Post extends React.Component {
                 </Dialog>
               </div>
 
-              <RaisedButton>Post</RaisedButton>
+              <div>
+                <RaisedButton label="Title" onClick={this.handleTitleDialogOpen} />
+                <Dialog
+                  title="Add a new title to your post"
+                  modal={false}
+                  actions={actionsTitle}
+                  open={this.state.openTitleDialog}
+                  onRequestClose={this.handleTitleDialogClose}
+                >
+                  <span>Title</span>
+                  <TextField id="newTitle"/>
+                </Dialog>
+              </div>
             </div>
           </div>
         </Card>
