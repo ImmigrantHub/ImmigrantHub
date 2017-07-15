@@ -333,7 +333,7 @@ li::before{
   left: -2em;
   width: 2em;
   height: .2em;
-  background: rgba(0, 188, 212, 0.6);
+  background: rgba(0, 188, 212, 0.3);
   z-index: 0;
 }
 
@@ -358,7 +358,7 @@ li:first-child::before {
 }
 
 .timeline-node {
-  background-color: dodgerblue;
+  background-color: rgba(0, 188, 212, 0.8);
 }
 
 .chip {
