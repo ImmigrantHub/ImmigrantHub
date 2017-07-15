@@ -21,8 +21,8 @@ class User extends React.Component {
       steps: [
         {
           title: 'Step 1',
-          tags: ['HB1, Visa, Mastercard'],
-          content: '<div>Waryfish flathead catfish, Atlantic silverside, warmouth Sacramento blackfish coley; yellowfin cutthroat trout yellowfin cutthroat trout. Rohu Siamese fighting fish vendace: Cherubfish peladillo, wahoo ladyfish betta daggertooth pike conger squeaker whiff, white croaker. Denticle herring freshwater eel, louvar Japanese eel southern sandfish sweeper dottyback coffinfish. Eel-goby sand lance slickhead</div>'
+          tags: ['HB1, Visa'],
+          content: 'Waryfish flathead catfish, Atlantic silverside, warmouth Sacramento blackfish coley; yellowfin cutthroat trout yellowfin cutthroat trout. Rohu Siamese fighting fish vendace: Cherubfish peladillo, wahoo ladyfish betta daggertooth pike conger squeaker whiff, white croaker. Denticle herring freshwater eel, louvar Japanese eel southern sandfish sweeper dottyback coffinfish. Eel-goby sand lance slickhead'
         },
         {
           title: 'Step 2',
@@ -31,8 +31,8 @@ class User extends React.Component {
         },
         {
           title: 'Step 3',
-          tags: ['Marriage, Naturalization, Trump'],
-          content: '<div>Johnny walker red galliano. The blenheim pisco sour speyburn nog-a-sake–tormore, polish martini stinger. Lochnagar remy martin lime rickey bull shot salty dog heart of fire chupacabra, brandy alexander old grand dad. Craigellachie, “singapore sling jack daniel’s tom and jerry batida mickey slim courvoisier blue hawaii; montgomery man o’war royal arrival colombia,” one-balled dictator</div>'
+          tags: ['Marriage, Naturalization'],
+          content: 'Johnny walker red galliano. The blenheim pisco sour speyburn nog-a-sake–tormore, polish martini stinger. Lochnagar remy martin lime rickey bull shot salty dog heart of fire chupacabra, brandy alexander old grand dad. Craigellachie, “singapore sling jack daniel’s tom and jerry batida mickey slim courvoisier blue hawaii; montgomery man o’war royal arrival colombia,” one-balled dictator'
         },
       ],
       openStep: false,
@@ -156,9 +156,12 @@ class User extends React.Component {
              <CardText>
                <h2>{this.state.currentStep.title}</h2>
                <div className="chip-wrapper">
-                <TagArray
-                  tags={this.state.currentStep.tags}
-                />
+                 {this.state.currentStep.tags.map((tag, i)  => {
+                  return (<TagArray
+                    tags={tag}
+                    key={i}
+                  />)
+                 })}
                </div>
 
                <div dangerouslySetInnerHTML={{ __html: this.state.currentStep.content}} />
